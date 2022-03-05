@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */; };
+		ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */; };
+		ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */; };
+		ADDA3C9E27D3EA9B00F07320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3C9C27D3EA9B00F07320 /* Main.storyboard */; };
+		ADDA3CA027D3EA9E00F07320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */; };
+		ADDA3CA327D3EA9E00F07320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3CA127D3EA9E00F07320 /* LaunchScreen.storyboard */; };
+		ADDA3CAE27D3EA9E00F07320 /* Moeda_DigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CAD27D3EA9E00F07320 /* Moeda_DigitalTests.swift */; };
+		ADDA3CB827D3EA9E00F07320 /* Moeda_DigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CB727D3EA9E00F07320 /* Moeda_DigitalUITests.swift */; };
+		ADDA3CBA27D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADDA3CAA27D3EA9E00F07320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADDA3C8B27D3EA9B00F07320 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADDA3C9227D3EA9B00F07320;
+			remoteInfo = "Moeda Digital";
+		};
+		ADDA3CB427D3EA9E00F07320 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADDA3C8B27D3EA9B00F07320 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADDA3C9227D3EA9B00F07320;
+			remoteInfo = "Moeda Digital";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADDA3C9327D3EA9B00F07320 /* Moeda Digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moeda Digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADDA3C9D27D3EA9B00F07320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADDA3CA227D3EA9E00F07320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADDA3CA427D3EA9E00F07320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDA3CA927D3EA9E00F07320 /* Moeda DigitalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moeda DigitalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDA3CAD27D3EA9E00F07320 /* Moeda_DigitalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda_DigitalTests.swift; sourceTree = "<group>"; };
+		ADDA3CB327D3EA9E00F07320 /* Moeda DigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moeda DigitalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDA3CB727D3EA9E00F07320 /* Moeda_DigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda_DigitalUITests.swift; sourceTree = "<group>"; };
+		ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda_DigitalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADDA3C9027D3EA9B00F07320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDA3CA627D3EA9E00F07320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDA3CB027D3EA9E00F07320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADDA3C8A27D3EA9B00F07320 = {
+			isa = PBXGroup;
+			children = (
+				ADDA3C9527D3EA9B00F07320 /* Moeda Digital */,
+				ADDA3CAC27D3EA9E00F07320 /* Moeda DigitalTests */,
+				ADDA3CB627D3EA9E00F07320 /* Moeda DigitalUITests */,
+				ADDA3C9427D3EA9B00F07320 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADDA3C9427D3EA9B00F07320 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADDA3C9327D3EA9B00F07320 /* Moeda Digital.app */,
+				ADDA3CA927D3EA9E00F07320 /* Moeda DigitalTests.xctest */,
+				ADDA3CB327D3EA9E00F07320 /* Moeda DigitalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADDA3C9527D3EA9B00F07320 /* Moeda Digital */ = {
+			isa = PBXGroup;
+			children = (
+				ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */,
+				ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */,
+				ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */,
+				ADDA3C9C27D3EA9B00F07320 /* Main.storyboard */,
+				ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */,
+				ADDA3CA127D3EA9E00F07320 /* LaunchScreen.storyboard */,
+				ADDA3CA427D3EA9E00F07320 /* Info.plist */,
+			);
+			path = "Moeda Digital";
+			sourceTree = "<group>";
+		};
+		ADDA3CAC27D3EA9E00F07320 /* Moeda DigitalTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADDA3CAD27D3EA9E00F07320 /* Moeda_DigitalTests.swift */,
+			);
+			path = "Moeda DigitalTests";
+			sourceTree = "<group>";
+		};
+		ADDA3CB627D3EA9E00F07320 /* Moeda DigitalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ADDA3CB727D3EA9E00F07320 /* Moeda_DigitalUITests.swift */,
+				ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */,
+			);
+			path = "Moeda DigitalUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADDA3C9227D3EA9B00F07320 /* Moeda Digital */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDA3CBD27D3EA9E00F07320 /* Build configuration list for PBXNativeTarget "Moeda Digital" */;
+			buildPhases = (
+				ADDA3C8F27D3EA9B00F07320 /* Sources */,
+				ADDA3C9027D3EA9B00F07320 /* Frameworks */,
+				ADDA3C9127D3EA9B00F07320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Moeda Digital";
+			productName = "Moeda Digital";
+			productReference = ADDA3C9327D3EA9B00F07320 /* Moeda Digital.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADDA3CA827D3EA9E00F07320 /* Moeda DigitalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDA3CC027D3EA9E00F07320 /* Build configuration list for PBXNativeTarget "Moeda DigitalTests" */;
+			buildPhases = (
+				ADDA3CA527D3EA9E00F07320 /* Sources */,
+				ADDA3CA627D3EA9E00F07320 /* Frameworks */,
+				ADDA3CA727D3EA9E00F07320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADDA3CAB27D3EA9E00F07320 /* PBXTargetDependency */,
+			);
+			name = "Moeda DigitalTests";
+			productName = "Moeda DigitalTests";
+			productReference = ADDA3CA927D3EA9E00F07320 /* Moeda DigitalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ADDA3CB227D3EA9E00F07320 /* Moeda DigitalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDA3CC327D3EA9E00F07320 /* Build configuration list for PBXNativeTarget "Moeda DigitalUITests" */;
+			buildPhases = (
+				ADDA3CAF27D3EA9E00F07320 /* Sources */,
+				ADDA3CB027D3EA9E00F07320 /* Frameworks */,
+				ADDA3CB127D3EA9E00F07320 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADDA3CB527D3EA9E00F07320 /* PBXTargetDependency */,
+			);
+			name = "Moeda DigitalUITests";
+			productName = "Moeda DigitalUITests";
+			productReference = ADDA3CB327D3EA9E00F07320 /* Moeda DigitalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADDA3C8B27D3EA9B00F07320 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					ADDA3C9227D3EA9B00F07320 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					ADDA3CA827D3EA9E00F07320 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = ADDA3C9227D3EA9B00F07320;
+					};
+					ADDA3CB227D3EA9E00F07320 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = ADDA3C9227D3EA9B00F07320;
+					};
+				};
+			};
+			buildConfigurationList = ADDA3C8E27D3EA9B00F07320 /* Build configuration list for PBXProject "Moeda Digital" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADDA3C8A27D3EA9B00F07320;
+			productRefGroup = ADDA3C9427D3EA9B00F07320 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADDA3C9227D3EA9B00F07320 /* Moeda Digital */,
+				ADDA3CA827D3EA9E00F07320 /* Moeda DigitalTests */,
+				ADDA3CB227D3EA9E00F07320 /* Moeda DigitalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADDA3C9127D3EA9B00F07320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDA3CA327D3EA9E00F07320 /* LaunchScreen.storyboard in Resources */,
+				ADDA3CA027D3EA9E00F07320 /* Assets.xcassets in Resources */,
+				ADDA3C9E27D3EA9B00F07320 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDA3CA727D3EA9E00F07320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDA3CB127D3EA9E00F07320 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADDA3C8F27D3EA9B00F07320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */,
+				ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */,
+				ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDA3CA527D3EA9E00F07320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDA3CAE27D3EA9E00F07320 /* Moeda_DigitalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDA3CAF27D3EA9E00F07320 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDA3CBA27D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift in Sources */,
+				ADDA3CB827D3EA9E00F07320 /* Moeda_DigitalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADDA3CAB27D3EA9E00F07320 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADDA3C9227D3EA9B00F07320 /* Moeda Digital */;
+			targetProxy = ADDA3CAA27D3EA9E00F07320 /* PBXContainerItemProxy */;
+		};
+		ADDA3CB527D3EA9E00F07320 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADDA3C9227D3EA9B00F07320 /* Moeda Digital */;
+			targetProxy = ADDA3CB427D3EA9E00F07320 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADDA3C9C27D3EA9B00F07320 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADDA3C9D27D3EA9B00F07320 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADDA3CA127D3EA9E00F07320 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADDA3CA227D3EA9E00F07320 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADDA3CBB27D3EA9E00F07320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADDA3CBC27D3EA9E00F07320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADDA3CBE27D3EA9E00F07320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DQ83Y243;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Moeda Digital/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nttdata.Moeda-Digital";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADDA3CBF27D3EA9E00F07320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DQ83Y243;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Moeda Digital/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nttdata.Moeda-Digital";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ADDA3CC127D3EA9E00F07320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DQ83Y243;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nttdata.Moeda-DigitalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moeda Digital.app/Moeda Digital";
+			};
+			name = Debug;
+		};
+		ADDA3CC227D3EA9E00F07320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DQ83Y243;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nttdata.Moeda-DigitalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moeda Digital.app/Moeda Digital";
+			};
+			name = Release;
+		};
+		ADDA3CC427D3EA9E00F07320 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DQ83Y243;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nttdata.Moeda-DigitalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Moeda Digital";
+			};
+			name = Debug;
+		};
+		ADDA3CC527D3EA9E00F07320 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DQ83Y243;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.nttdata.Moeda-DigitalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Moeda Digital";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADDA3C8E27D3EA9B00F07320 /* Build configuration list for PBXProject "Moeda Digital" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDA3CBB27D3EA9E00F07320 /* Debug */,
+				ADDA3CBC27D3EA9E00F07320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDA3CBD27D3EA9E00F07320 /* Build configuration list for PBXNativeTarget "Moeda Digital" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDA3CBE27D3EA9E00F07320 /* Debug */,
+				ADDA3CBF27D3EA9E00F07320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDA3CC027D3EA9E00F07320 /* Build configuration list for PBXNativeTarget "Moeda DigitalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDA3CC127D3EA9E00F07320 /* Debug */,
+				ADDA3CC227D3EA9E00F07320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDA3CC327D3EA9E00F07320 /* Build configuration list for PBXNativeTarget "Moeda DigitalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDA3CC427D3EA9E00F07320 /* Debug */,
+				ADDA3CC527D3EA9E00F07320 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADDA3C8B27D3EA9B00F07320 /* Project object */;
+}
