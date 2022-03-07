@@ -10,6 +10,7 @@ import UIKit
 class MoedaScreen: UIView {
     
     let searchBar = UISearchBar()
+    let categoryCellid = UICollectionViewController().self
 
     lazy var moedaLabel: UILabel = {
         let label = UILabel()
@@ -39,6 +40,16 @@ class MoedaScreen: UIView {
         search.text = "Search"
         return search
     }()
+    
+    lazy var scrollInfinite: UIScrollView = {
+       let scroll = UIScrollView()
+        let layout = UICollectionViewFlowLayout()
+               layout.scrollDirection = .horizontal
+          //    let controller1 = DetailsController(collectionViewLayout: layout)
+           //    navigationController?.pushViewController(controller1, animated: true
+
+        return scroll
+    }()
 
     
     override init(frame: CGRect) {
@@ -46,13 +57,14 @@ class MoedaScreen: UIView {
         self.addSubview(self.moedaLabel)
         self.addSubview(self.dataLabel)
         self.addSubview(self.search)
+        self.addSubview(self.scrollInfinite)
         self.setUpConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+ 
     func setUpConstraints(){
        NSLayoutConstraint.activate([
         
@@ -63,15 +75,16 @@ class MoedaScreen: UIView {
         
          self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
         self.dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-     
-       // self.dataLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-       // self.dataLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
          self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
        
         
         self.search.topAnchor.constraint(equalTo: self.dataLabel.bottomAnchor, constant: 14),
         self.search.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6),
-        self.search.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -6)
+        self.search.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -6),
+        
+     //  self.scrollInfinite.topAnchor.constraint(equalTo: self.search.bottomAnchor, constant: 80),
+        self.scrollInfinite.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
+        self.scrollInfinite.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14)
      ])
   }
 }
