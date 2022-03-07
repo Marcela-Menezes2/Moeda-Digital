@@ -64,8 +64,6 @@ class MoedaScreen: UIView {
          self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
         self.dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
      
-       // self.dataLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-       // self.dataLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
          self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
        
         

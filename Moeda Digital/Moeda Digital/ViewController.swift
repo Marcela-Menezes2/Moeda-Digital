@@ -17,18 +17,18 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        let vc1 = ViewController1()
-        vc1.title = "Moedas"
+        let listagemVC = ListagemViewController()
+        listagemVC.title = "Moedas"
 
 
-        let vc2 = ViewController2()
-        vc2.title = "Adicionadas"
+        let favoritosVC = FavoritosViewController()
+        favoritosVC.title = "Adicionadas"
         
         
         
         
         let tabBarViewController = UITabBarController()
-        tabBarViewController.setViewControllers([vc1, vc2], animated: false)
+        tabBarViewController.setViewControllers([listagemVC, favoritosVC], animated: false)
         
         guard let icones = tabBarViewController.tabBar.items else {
             return
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
 
 }
  
-class ViewController1: UIViewController {
+class ListagemViewController: UIViewController {
 
     var moedaScreen:MoedaScreen?
  
@@ -81,12 +81,10 @@ class ViewController1: UIViewController {
 
 }
 
-class ViewController2: UIViewController {
+class FavoritosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-
-//        let titulo = "Adicionadas"
-    }  
+    }
 }
