@@ -10,12 +10,12 @@
 		ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */; };
 		ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */; };
 		ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */; };
-		ADDA3C9E27D3EA9B00F07320 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3C9C27D3EA9B00F07320 /* Main.storyboard */; };
 		ADDA3CA027D3EA9E00F07320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */; };
 		ADDA3CA327D3EA9E00F07320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3CA127D3EA9E00F07320 /* LaunchScreen.storyboard */; };
 		ADDA3CAE27D3EA9E00F07320 /* Moeda_DigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CAD27D3EA9E00F07320 /* Moeda_DigitalTests.swift */; };
 		ADDA3CB827D3EA9E00F07320 /* Moeda_DigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CB727D3EA9E00F07320 /* Moeda_DigitalUITests.swift */; };
 		ADDA3CBA27D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */; };
+		ADE1F3EA27D6374900BA0FD9 /* moedaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3E927D6374900BA0FD9 /* moedaScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADDA3C9D27D3EA9B00F07320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDA3CA227D3EA9E00F07320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADDA3CA427D3EA9E00F07320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		ADDA3CB327D3EA9E00F07320 /* Moeda DigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moeda DigitalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDA3CB727D3EA9E00F07320 /* Moeda_DigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda_DigitalUITests.swift; sourceTree = "<group>"; };
 		ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda_DigitalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ADE1F3E927D6374900BA0FD9 /* moedaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moedaScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,10 @@
 		ADDA3C9527D3EA9B00F07320 /* Moeda Digital */ = {
 			isa = PBXGroup;
 			children = (
+				ADE1F3E827D636E400BA0FD9 /* Screen */,
 				ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */,
 				ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */,
 				ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */,
-				ADDA3C9C27D3EA9B00F07320 /* Main.storyboard */,
 				ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */,
 				ADDA3CA127D3EA9E00F07320 /* LaunchScreen.storyboard */,
 				ADDA3CA427D3EA9E00F07320 /* Info.plist */,
@@ -125,6 +125,14 @@
 				ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */,
 			);
 			path = "Moeda DigitalUITests";
+			sourceTree = "<group>";
+		};
+		ADE1F3E827D636E400BA0FD9 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				ADE1F3E927D6374900BA0FD9 /* moedaScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +241,6 @@
 			files = (
 				ADDA3CA327D3EA9E00F07320 /* LaunchScreen.storyboard in Resources */,
 				ADDA3CA027D3EA9E00F07320 /* Assets.xcassets in Resources */,
-				ADDA3C9E27D3EA9B00F07320 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +267,7 @@
 			files = (
 				ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */,
 				ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */,
+				ADE1F3EA27D6374900BA0FD9 /* moedaScreen.swift in Sources */,
 				ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +305,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADDA3C9C27D3EA9B00F07320 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADDA3C9D27D3EA9B00F07320 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADDA3CA127D3EA9E00F07320 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +444,6 @@
 				INFOPLIST_FILE = "Moeda Digital/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +471,6 @@
 				INFOPLIST_FILE = "Moeda Digital/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
