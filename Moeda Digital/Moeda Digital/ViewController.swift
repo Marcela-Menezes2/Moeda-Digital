@@ -8,15 +8,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    var moedaScreen:MoedaScreen?
+ 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+  
+    override func loadView() {
+        self.moedaScreen = MoedaScreen()
+        self.view = self.moedaScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
-        
+
+        self.view.backgroundColor = .black
+
+    }
+  
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    
     }
     override func viewDidAppear(_ animated: Bool) {
         let vc1 = ViewController1()
         vc1.title = "Moedas"
+
 
         let vc2 = ViewController2()
         vc2.title = "Adicionadas"
@@ -45,7 +64,7 @@ class ViewController: UIViewController {
         }
         
         tabBarViewController.modalPresentationStyle = .fullScreen
-        present(tabBarViewController, animated: true)
+        present(tabBarViewController, animated: false)
     }
 
 }
@@ -68,7 +87,5 @@ class ViewController2: UIViewController {
         view.backgroundColor = .black
 
 //        let titulo = "Adicionadas"
-    }
-
+    }  
 }
-
