@@ -74,10 +74,7 @@ class ViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-//        let vc:DetailsVC = DetailsVC()
-//                if let navigation = navigationController{
-//                    navigation.pushViewController(vc, animated: true)
-//                }
+//
             }
 //        let titulo = "Moedas"
     }
@@ -85,11 +82,28 @@ class ViewController1: UIViewController {
 
 
 class ViewController2: UIViewController {
-
+    
+    var vc: DetalhesScreen?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+       
       
+    }
+      
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func loadView() {
+        self.vc = DetalhesScreen()
+        self.view = self.vc
+    }
+    
+   override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+    
 //        let titulo = "Adicionadas"
     }  
-}
+

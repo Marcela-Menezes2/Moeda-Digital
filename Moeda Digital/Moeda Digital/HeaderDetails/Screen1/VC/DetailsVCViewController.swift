@@ -7,14 +7,14 @@
 
 import UIKit
 
-class DetailsVC: UIViewController {
+class DetalhesViewController: UIViewController {
 
     
-    var detailsScreen: DetailsScreen?
+    var detalhesScreen: DetalhesScreen?
     
     override func loadView() {
-        self.detailsScreen = DetailsScreen()
-        self.view = self.detailsScreen
+        self.detalhesScreen = DetalhesScreen()
+        self.view = self.detalhesScreen
     }
     
     override func viewDidLoad() {
@@ -22,5 +22,8 @@ class DetailsVC: UIViewController {
        
     }
     
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
 
 }

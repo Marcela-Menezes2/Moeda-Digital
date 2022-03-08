@@ -41,23 +41,11 @@ class MoedaScreen: UIView {
         return search
     }()
     
-   lazy var scrollInfinite: UIScrollView = {
-      let scroll = UIScrollView()
-   let layout = UICollectionViewFlowLayout()
-               layout.scrollDirection = .horizontal
-          //    let controller1 = DetailsController(collectionViewLayout: layout)
-           //    navigationController?.pushViewController(controller1, animated: true
-
-        return scroll
-    }()
-
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(self.moedaLabel)
         self.addSubview(self.dataLabel)
         self.addSubview(self.search)
-        self.addSubview(self.scrollInfinite)
         self.setUpConstraints()
     }
     
@@ -82,9 +70,7 @@ class MoedaScreen: UIView {
         self.search.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6),
         self.search.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -6),
         
-     //  self.scrollInfinite.topAnchor.constraint(equalTo: self.search.bottomAnchor, constant: 80),
-        self.scrollInfinite.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 14),
-        self.scrollInfinite.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -14)
+    
      ])
   }
 }
