@@ -76,20 +76,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6BE33E9127D6743400DECBB4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6BE33E9227D674EF00DECBB4 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		6BE33E9327D674F900DECBB4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +84,25 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6BE33E9427D6750200DECBB4 /* View */ = {
+		AD1E8E4527D7862E009DF8F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AD1E8E4627D78639009DF8F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD1E8E4727D78644009DF8F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ADDA3C8A27D3EA9B00F07320 = {
@@ -128,10 +128,10 @@
 		ADDA3C9527D3EA9B00F07320 /* Moeda Digital */ = {
 			isa = PBXGroup;
 			children = (
-				6BE33E9427D6750200DECBB4 /* View */,
+				AD1E8E4627D78639009DF8F9 /* ViewModel */,
+				AD1E8E4727D78644009DF8F9 /* Model */,
+				AD1E8E4527D7862E009DF8F9 /* View */,
 				6BE33E9327D674F900DECBB4 /* Controller */,
-				6BE33E9227D674EF00DECBB4 /* ViewModel */,
-				6BE33E9127D6743400DECBB4 /* Model */,
 				ADE1F3E827D636E400BA0FD9 /* Screen */,
 				ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */,
 				ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */,
