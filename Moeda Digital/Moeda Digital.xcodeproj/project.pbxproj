@@ -16,7 +16,6 @@
 		ADDA3CB827D3EA9E00F07320 /* Moeda_DigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CB727D3EA9E00F07320 /* Moeda_DigitalUITests.swift */; };
 		ADDA3CBA27D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */; };
 		ADE1F3EA27D6374900BA0FD9 /* moedaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3E927D6374900BA0FD9 /* moedaScreen.swift */; };
-		ADE1F3F327D6747800BA0FD9 /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3F227D6747800BA0FD9 /* customView.swift */; };
 		ADE1F3F927D67C5C00BA0FD9 /* DetailsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3F827D67C5C00BA0FD9 /* DetailsVCViewController.swift */; };
 		ADE1F3FB27D6829700BA0FD9 /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3FA27D6829700BA0FD9 /* DetailsScreen.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		ADDA3CB727D3EA9E00F07320 /* Moeda_DigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda_DigitalUITests.swift; sourceTree = "<group>"; };
 		ADDA3CB927D3EA9E00F07320 /* Moeda_DigitalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda_DigitalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ADE1F3E927D6374900BA0FD9 /* moedaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moedaScreen.swift; sourceTree = "<group>"; };
-		ADE1F3F227D6747800BA0FD9 /* customView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
 		ADE1F3F827D67C5C00BA0FD9 /* DetailsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVCViewController.swift; sourceTree = "<group>"; };
 		ADE1F3FA27D6829700BA0FD9 /* DetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				ADE1F3F527D67B8300BA0FD9 /* HeaderDetails */,
-				ADE1F3EE27D66FE600BA0FD9 /* CustomView */,
 				ADE1F3E827D636E400BA0FD9 /* Screen */,
 				ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */,
 				ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */,
@@ -141,14 +138,6 @@
 				ADE1F3E927D6374900BA0FD9 /* moedaScreen.swift */,
 			);
 			path = Screen;
-			sourceTree = "<group>";
-		};
-		ADE1F3EE27D66FE600BA0FD9 /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-				ADE1F3F227D6747800BA0FD9 /* customView.swift */,
-			);
-			path = CustomView;
 			sourceTree = "<group>";
 		};
 		ADE1F3F127D6736B00BA0FD9 /* Storyboard */ = {
@@ -314,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE1F3F327D6747800BA0FD9 /* customView.swift in Sources */,
 				ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */,
 				ADE1F3FB27D6829700BA0FD9 /* DetailsScreen.swift in Sources */,
 				ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */,

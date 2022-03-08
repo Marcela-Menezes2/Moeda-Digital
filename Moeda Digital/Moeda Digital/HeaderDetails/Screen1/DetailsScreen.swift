@@ -9,6 +9,7 @@ import UIKit
 
 class DetailsScreen: UIView {
 
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configBackGround()

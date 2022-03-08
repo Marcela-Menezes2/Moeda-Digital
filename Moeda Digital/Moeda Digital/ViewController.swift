@@ -74,11 +74,15 @@ class ViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-
+//        let vc:DetailsVC = DetailsVC()
+//                if let navigation = navigationController{
+//                    navigation.pushViewController(vc, animated: true)
+//                }
+            }
 //        let titulo = "Moedas"
     }
 
-}
+
 
 class ViewController2: UIViewController {
 

@@ -41,9 +41,9 @@ class MoedaScreen: UIView {
         return search
     }()
     
-    lazy var scrollInfinite: UIScrollView = {
-       let scroll = UIScrollView()
-        let layout = UICollectionViewFlowLayout()
+   lazy var scrollInfinite: UIScrollView = {
+      let scroll = UIScrollView()
+   let layout = UICollectionViewFlowLayout()
                layout.scrollDirection = .horizontal
           //    let controller1 = DetailsController(collectionViewLayout: layout)
            //    navigationController?.pushViewController(controller1, animated: true
