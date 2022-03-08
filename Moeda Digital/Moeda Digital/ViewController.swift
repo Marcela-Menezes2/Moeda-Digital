@@ -70,12 +70,42 @@ class ViewController: UIViewController {
 }
  
 class ViewController1: UIViewController {
+    
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .black
+    var moedaScreen:MoedaScreen?
+
+      override var preferredStatusBarStyle: UIStatusBarStyle {
+      return .lightContent
+
+        }
+
+        override func loadView() {
+            self.moedaScreen = MoedaScreen()
+            self.view = self.moedaScreen
+
+        }
+
+        
+
+        override func viewDidLoad() {
+
+            super.viewDidLoad()
+
+            self.view.backgroundColor = .black
+
+
+
+        }
+        override func viewWillAppear(_ animated: Bool) {
+
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+
+        
+
+        }
 //
-            }
+            
 //        let titulo = "Moedas"
     }
 

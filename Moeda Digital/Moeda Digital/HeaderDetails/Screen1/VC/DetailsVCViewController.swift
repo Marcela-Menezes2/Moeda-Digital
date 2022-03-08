@@ -19,11 +19,23 @@ class DetalhesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.detalhesScreen?.delegate(delegate: self)
        
     }
-    
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-            return .lightContent
-        }
-
 }
+    
+extension DetalhesViewController: DetalhesScreenProtocol{
+    func actionCadastrarButton() {
+        print("Cadastrar Button!!")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+        func actionBackButton() {
+           print("Back Button!!")
+        
+        }
+    
+}
+    
+    
+
