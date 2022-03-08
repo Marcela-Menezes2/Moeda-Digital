@@ -20,7 +20,7 @@ class MoedaScreen: UIView {
         return label
     }()
     
-      lazy var dataLabel: UILabel = {
+    lazy var dataLabel: UILabel = {
        let label = UILabel()
        label.translatesAutoresizingMaskIntoConstraints = false
        label.textColor = .white
@@ -49,6 +49,12 @@ class MoedaScreen: UIView {
         self.setUpConstraints()
     }
     
+    private let tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return tableView
+    }()
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -59,14 +65,10 @@ class MoedaScreen: UIView {
         self.moedaLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 14),
         self.moedaLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
      
-        
-        
-         self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
+        self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
         self.dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-     
-         self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
-       
-        
+        self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
+               
         self.search.topAnchor.constraint(equalTo: self.dataLabel.bottomAnchor, constant: 14),
         self.search.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6),
         self.search.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -6)

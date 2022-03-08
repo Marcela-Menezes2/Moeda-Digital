@@ -17,15 +17,14 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        //MARK: Referencias da TabBar
         let listagemVC = ListagemViewController()
-        listagemVC.title = "Moedas"
-
-
         let favoritosVC = FavoritosViewController()
+        
+        //MARK: Seta TabBar
+        
+        listagemVC.title = "Moedas"
         favoritosVC.title = "Adicionadas"
-        
-        
-        
         
         let tabBarViewController = UITabBarController()
         tabBarViewController.setViewControllers([listagemVC, favoritosVC], animated: false)
@@ -33,7 +32,6 @@ class ViewController: UIViewController {
         guard let icones = tabBarViewController.tabBar.items else {
             return
         }
-        
         let imagens = ["dollarsign.square","star.fill"]
         
         for icone in 0..<icones.count {
@@ -54,7 +52,7 @@ class ViewController: UIViewController {
 }
  
 class ListagemViewController: UIViewController {
-
+    
     var moedaScreen:MoedaScreen?
  
     override var preferredStatusBarStyle: UIStatusBarStyle {
