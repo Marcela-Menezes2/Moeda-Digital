@@ -115,6 +115,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     
     return cell
   
+   }
+    // MARK: - AQUI
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detalhesViewController = DetalhesViewController()
     }
-
 }

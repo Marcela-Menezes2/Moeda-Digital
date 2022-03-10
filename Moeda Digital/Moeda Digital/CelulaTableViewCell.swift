@@ -15,8 +15,6 @@ class CelulaTableViewCell: UITableViewCell {
         lb.translatesAutoresizingMaskIntoConstraints = false
         lb.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         lb.textColor = .white
-        
-        
         return lb
     }()
     
@@ -35,4 +33,6 @@ class CelulaTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+   
 }
+

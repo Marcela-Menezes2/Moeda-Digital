@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD67CAAC27D8EFF1008F7613 /* CriptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67CAAB27D8EFF1008F7613 /* CriptoTableViewCell.swift */; };
-		AD67CAB027D90F43008F7613 /* CriptoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67CAAF27D90F43008F7613 /* CriptoController.swift */; };
-		AD67CAB627D920DA008F7613 /* ListaMoeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD67CAB527D920DA008F7613 /* ListaMoeda.swift */; };
 		ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */; };
 		ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */; };
 		ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */; };
@@ -43,9 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AD67CAAB27D8EFF1008F7613 /* CriptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoTableViewCell.swift; sourceTree = "<group>"; };
-		AD67CAAF27D90F43008F7613 /* CriptoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoController.swift; sourceTree = "<group>"; };
-		AD67CAB527D920DA008F7613 /* ListaMoeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMoeda.swift; sourceTree = "<group>"; };
 		ADDA3C9327D3EA9B00F07320 /* Moeda Digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moeda Digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +96,6 @@
 		AD67CAB227D91DD8008F7613 /* Controllrs */ = {
 			isa = PBXGroup;
 			children = (
-				AD67CAAF27D90F43008F7613 /* CriptoController.swift */,
 				ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */,
 			);
 			path = Controllrs;
@@ -111,17 +104,8 @@
 		AD67CAB327D91FD2008F7613 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				AD67CAAB27D8EFF1008F7613 /* CriptoTableViewCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		AD67CAB427D92066008F7613 /* ListaMoeda */ = {
-			isa = PBXGroup;
-			children = (
-				AD67CAB527D920DA008F7613 /* ListaMoeda.swift */,
-			);
-			path = ListaMoeda;
 			sourceTree = "<group>";
 		};
 		ADDA3C8A27D3EA9B00F07320 = {
@@ -152,7 +136,6 @@
 				ADE1F3E827D636E400BA0FD9 /* Screen */,
 				AD67CAB227D91DD8008F7613 /* Controllrs */,
 				AD67CAB327D91FD2008F7613 /* Cell */,
-				AD67CAB427D92066008F7613 /* ListaMoeda */,
 				ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */,
 				ADE1F3F127D6736B00BA0FD9 /* Storyboard */,
 				ADDA3CA427D3EA9E00F07320 /* Info.plist */,
@@ -350,15 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD67CAAC27D8EFF1008F7613 /* CriptoTableViewCell.swift in Sources */,
 				ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */,
 				ADF43FC227DA6C7A00EF526C /* UIViewController+.swift in Sources */,
 				ADE1F3FB27D6829700BA0FD9 /* DetalhesScreen.swift in Sources */,
 				ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */,
 				ADE1F3F927D67C5C00BA0FD9 /* DetalhesVCViewController.swift in Sources */,
 				ADE1F3EA27D6374900BA0FD9 /* moedaScreen.swift in Sources */,
-				AD67CAB027D90F43008F7613 /* CriptoController.swift in Sources */,
-				AD67CAB627D920DA008F7613 /* ListaMoeda.swift in Sources */,
 				ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */,
 				ADF43FC427DA733400EF526C /* CelulaTableViewCell.swift in Sources */,
 			);
