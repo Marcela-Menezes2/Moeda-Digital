@@ -20,22 +20,20 @@ class DetalhesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detalhesScreen?.delegate(delegate: self)
-       
+
     }
 }
     
+
 extension DetalhesViewController: DetalhesScreenProtocol{
-    func actionCadastrarButton() {
-        print("Cadastrar Button!!")
+   @objc func actionBackButton() {
+        print("Que merda é essa")
         self.navigationController?.popViewController(animated: true)
     }
     
-        func actionBackButton() {
-           print("Back Button!!")
+    func actionCadastrarButton() {
         
-        }
-    
+    }
 }
-    
-    
+
 

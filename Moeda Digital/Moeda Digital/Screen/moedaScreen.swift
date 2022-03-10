@@ -7,7 +7,19 @@
 
 import UIKit
 
+protocol MoedaScreenProtocol: AnyObject {
+    func actionCadastrarButton()
+}
+
 class MoedaScreen: UIView {
+    
+    let cellId = "celulaMoeda"
+    let dados = ["Moacir", "Ana", "Tatiana", "Natanael", "Joao", "Pedro", "Mallu Cristina", "Paulo", "Lucas", "Marcela", "Bruna" ]
+    
+    private weak var delegate: MoedaScreenProtocol?
+    func delegate(delegate: MoedaScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     let searchBar = UISearchBar()
     let categoryCellid = UICollectionViewController().self
@@ -41,11 +53,24 @@ class MoedaScreen: UIView {
         return search
     }()
     
+    lazy var tableView: UITableView = {
+        let tv = UITableView(frame: .zero, style: .plain)
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        tv.backgroundColor = .black
+        tv.delegate = self
+        tv.dataSource = self
+        tv.register(CelulaTableViewCell.self, forCellReuseIdentifier: self.cellId)
+        tv.accessibilityLabel = "Lista de cripto moedas"
+        return tv
+    }()
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(self.moedaLabel)
         self.addSubview(self.dataLabel)
         self.addSubview(self.search)
+        self.addSubview(tableView)
         self.setUpConstraints()
     }
     
@@ -59,18 +84,37 @@ class MoedaScreen: UIView {
         self.moedaLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 14),
         self.moedaLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
      
-        
-        
-         self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
+        self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
         self.dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-         self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
+        self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
        
-        
         self.search.topAnchor.constraint(equalTo: self.dataLabel.bottomAnchor, constant: 14),
         self.search.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6),
         self.search.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -6),
         
-    
+        self.tableView.topAnchor.constraint(equalTo: search.bottomAnchor, constant: 10),
+        self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+        self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor),
+        self.tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
      ])
   }
+}
+
+extension MoedaScreen: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.dados.count
+    }
+    
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CelulaTableViewCell
+    
+    let nome = dados[indexPath.row]
+    
+    cell.name.text = nome
+    cell.backgroundColor = .black
+    
+    return cell
+  
+    }
+
 }

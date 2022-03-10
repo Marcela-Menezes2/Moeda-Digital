@@ -13,13 +13,11 @@ protocol DetalhesScreenProtocol:AnyObject{
 }
 
 class DetalhesScreen: UIView {
-    
     weak var delegate:DetalhesScreenProtocol?
-    
     func delegate(delegate:DetalhesScreenProtocol?){
         self.delegate = delegate
     }
-    
+   
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -62,8 +60,6 @@ class DetalhesScreen: UIView {
         return label
     }()
         
-   
-    
     lazy var viewPreta: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +82,6 @@ class DetalhesScreen: UIView {
         return button
     }()
     
-    
     lazy var volumeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -94,7 +89,7 @@ class DetalhesScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "volumes negociados"
         return label
-}()
+    }()
     
     lazy var horaLabel: UILabel = {
         let label = UILabel()
@@ -103,7 +98,6 @@ class DetalhesScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "Última Hora"
         return label
-        
     }()
     
     lazy var mesLabel: UILabel = {
@@ -113,7 +107,6 @@ class DetalhesScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "Última Mês"
         return label
-        
     }()
     
     lazy var anoLabel: UILabel = {
@@ -123,9 +116,7 @@ class DetalhesScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "Última Ano"
         return label
-        
     }()
-    
     
     lazy var valor1Label: UILabel = {
         let label = UILabel()
@@ -134,9 +125,7 @@ class DetalhesScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "123,456.78"
         return label
-        
     }()
-    
     
     lazy var valor2Label: UILabel = {
         let label = UILabel()
@@ -145,9 +134,7 @@ class DetalhesScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "123,456.78"
         return label
-        
     }()
-    
     
     lazy var valor3Label: UILabel = {
         let label = UILabel()
@@ -156,7 +143,6 @@ class DetalhesScreen: UIView {
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = "123,456.78"
         return label
-        
     }()
     
     override init(frame: CGRect) {
@@ -168,13 +154,16 @@ class DetalhesScreen: UIView {
         self.configSuperLabel()
         self.configImageView()
         self.setUpContraints()
-        
     }
+    
+//  override var preferredStatusBarStyle: UIStatusBarStyle {
+//       return .lightContent
+//   }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+   
     private func configSuperView() {
         self.addSubview(self.backButton)
         self.addSubview(self.adicionarButton)
@@ -188,8 +177,6 @@ class DetalhesScreen: UIView {
         self.addSubview(self.valor1Label)
         self.addSubview(self.valor2Label)
         self.addSubview(self.valor3Label)
-        
-        
     }
     
     private func configLabel() {
@@ -212,17 +199,15 @@ class DetalhesScreen: UIView {
     
     @objc private func tappedBackButton() {
         self.delegate?.actionBackButton()
+   }
+    
+    @objc private func tappedAdicionaButton(sender: UIButton!) {
+        self.delegate?.actionCadastrarButton()
     }
     
-    @objc private func tappedAdicionaButton() {
-        self.delegate?.actionCadastrarButton()
- 
-
-    }
     private func setUpContraints(){
         NSLayoutConstraint.activate([
         
-            
             self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             
@@ -232,48 +217,49 @@ class DetalhesScreen: UIView {
             self.btcLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 15),
             self.btcLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            self.imagemMoeda.topAnchor.constraint(equalTo: self.btcLabel.bottomAnchor, constant: 40),
+            self.imagemMoeda.topAnchor.constraint(equalTo: self.btcLabel.topAnchor, constant: 50),
             self.imagemMoeda.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 125),
             self.imagemMoeda.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -125),
             self.imagemMoeda.heightAnchor.constraint(equalToConstant: 30),
             
-            self.numLabel.topAnchor.constraint(equalTo: self.imagemMoeda.bottomAnchor, constant: 10),
+            self.numLabel.topAnchor.constraint(equalTo: self.imagemMoeda.topAnchor, constant: 40),
             self.numLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.numLabel.heightAnchor.constraint(equalToConstant: 40),
+            self.numLabel.heightAnchor.constraint(equalToConstant: 20),
        
             
-            self.adicionarButton.topAnchor.constraint(equalTo: self.numLabel.topAnchor, constant: 60),
+            self.adicionarButton.topAnchor.constraint(equalTo: self.numLabel.topAnchor, constant: 70),
             self.adicionarButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
             self.adicionarButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -50),
-            self.adicionarButton.heightAnchor.constraint(equalToConstant: 30),
+            self.adicionarButton.heightAnchor.constraint(equalToConstant: 50),
          
-            self.viewPreta.topAnchor.constraint(equalTo: self.adicionarButton.bottomAnchor, constant: 40),
+            self.viewPreta.topAnchor.constraint(equalTo: self.adicionarButton.bottomAnchor, constant: 20),
             self.viewPreta.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             self.viewPreta.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            self.viewPreta.heightAnchor.constraint(equalToConstant: 600),
+            self.viewPreta.heightAnchor.constraint(equalToConstant: 500),
             
-       
+            self.volumeLabel.topAnchor.constraint(equalTo: self.adicionarButton.bottomAnchor, constant: 30),
             self.volumeLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.volumeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.volumeLabel.heightAnchor.constraint(equalToConstant: 300),
+            self.volumeLabel.heightAnchor.constraint(equalToConstant: 40),
             
-            self.horaLabel.topAnchor.constraint(equalTo: self.volumeLabel.topAnchor, constant: 215),
+            self.horaLabel.topAnchor.constraint(equalTo: self.volumeLabel.bottomAnchor, constant: 15),
             self.horaLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             
-            self.mesLabel.topAnchor.constraint(equalTo: self.horaLabel.topAnchor, constant: 60),
+            self.mesLabel.topAnchor.constraint(equalTo: self.horaLabel.bottomAnchor, constant: 45),
             self.mesLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             
-            self.anoLabel.topAnchor.constraint(equalTo: self.mesLabel.topAnchor, constant: 60),
+            self.anoLabel.topAnchor.constraint(equalTo: self.mesLabel.bottomAnchor, constant: 45),
             self.anoLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             
-            self.valor1Label.topAnchor.constraint(equalTo: self.volumeLabel.topAnchor, constant: 215),
-            self.valor1Label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            self.valor1Label.topAnchor.constraint(equalTo: self.volumeLabel.bottomAnchor, constant: 15),
+            self.valor1Label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            self.valor2Label.topAnchor.constraint(equalTo: self.valor1Label.topAnchor, constant: 60),
-            self.valor2Label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            self.valor2Label.topAnchor.constraint(equalTo: self.valor1Label.bottomAnchor, constant: 45),
+            self.valor2Label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            self.valor3Label.topAnchor.constraint(equalTo: self.valor2Label.topAnchor, constant: 60),
-            self.valor3Label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            self.valor3Label.topAnchor.constraint(equalTo: self.valor2Label.bottomAnchor, constant: 45),
+            self.valor3Label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            self.valor3Label.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 }
