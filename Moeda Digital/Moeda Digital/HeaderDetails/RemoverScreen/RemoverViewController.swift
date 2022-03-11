@@ -1,24 +1,25 @@
 //
-//  DetailsVC.swift
+//  RemoveViewController.swift
 //  Moeda Digital
 //
-//  Created by Marcela Menezes Silva on 07/03/22.
+//  Created by Marcela Menezes Silva on 11/03/22.
 //
 
+import Foundation
 import UIKit
 
-class DetalhesViewController: UIViewController {
+class RemoverViewController: UIViewController {
 
-    var detalhesScreen: DetalhesScreen?
+    var removerScreen: RemoverScreen?
     
     override func loadView() {
-        self.detalhesScreen = DetalhesScreen()
-        self.view = self.detalhesScreen
+        self.removerScreen = RemoverScreen()
+        self.view = self.removerScreen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.detalhesScreen?.delegate(delegate: self)
+        self.removerScreen?.delegate(delegate: self)
 
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -28,7 +29,7 @@ class DetalhesViewController: UIViewController {
 
     
 
-extension DetalhesViewController: DetalhesScreenProtocol{
+extension RemoverViewController: RemoverScreenProtocol{
    @objc func actionBackButton() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -37,5 +38,4 @@ extension DetalhesViewController: DetalhesScreenProtocol{
         
     }
 }
-
 

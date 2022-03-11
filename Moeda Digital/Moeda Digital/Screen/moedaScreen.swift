@@ -9,10 +9,14 @@ import UIKit
 
 protocol MoedaScreenProtocol: AnyObject {
     func actionCadastrarButton()
+   
 }
 
 class MoedaScreen: UIView {
-    
+  //  let navigationController = UINavigationController()
+    var onVoltar: (() -> Void)!
+    var detalhes: DetalhesViewController = DetalhesViewController()
+   
     let cellId = "celulaMoeda"
     let dados = ["Moacir", "Ana", "Tatiana", "Natanael", "Joao", "Pedro", "Mallu Cristina", "Paulo", "Lucas", "Marcela", "Bruna" ]
     
@@ -63,7 +67,6 @@ class MoedaScreen: UIView {
         tv.accessibilityLabel = "Lista de cripto moedas"
         return tv
     }()
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -107,7 +110,7 @@ extension MoedaScreen: UITableViewDelegate, UITableViewDataSource {
     
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CelulaTableViewCell
-    
+ 
     let nome = dados[indexPath.row]
     
     cell.name.text = nome
@@ -116,8 +119,17 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     return cell
   
    }
-    // MARK: - AQUI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detalhesViewController = DetalhesViewController()
+        print("DEu Certo")
+       
     }
+
+  //  self.navigationController?.pushViewController(detalhes, animated: true)
+    // MARK: - AQUI
+    // func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // tableView(UITableView, didSelectRowAt: navigationController)
+   // }
 }
+
+    
+

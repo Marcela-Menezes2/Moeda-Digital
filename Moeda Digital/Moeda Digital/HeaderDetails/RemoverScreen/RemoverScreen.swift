@@ -1,20 +1,21 @@
 //
-//  DetalhesScreen.swift
-//  LoginViewCode
+//  RemoveScreen.swift
+//  Moeda Digital
 //
-//  Created by Marcela Menezes Silva on 07/03/22.
+//  Created by Marcela Menezes Silva on 11/03/22.
 //
 
+import Foundation
 import UIKit
 
-protocol DetalhesScreenProtocol:AnyObject{
+protocol RemoverScreenProtocol:AnyObject{
     func actionBackButton()
     func actionCadastrarButton()
 }
 
-class DetalhesScreen: UIView {
-    weak var delegate:DetalhesScreenProtocol?
-    func delegate(delegate:DetalhesScreenProtocol?){
+class RemoverScreen: UIView {
+    weak var delegate:RemoverScreenProtocol?
+    func delegate(delegate:RemoverScreenProtocol?){
         self.delegate = delegate
     }
    
@@ -51,6 +52,13 @@ class DetalhesScreen: UIView {
         return imagem
     }()
     
+    lazy var imagMoeda: UIImageView = {
+        let imagem = UIImageView()
+        imagem.translatesAutoresizingMaskIntoConstraints = false
+        imagem.image = UIImage(named: "star")
+        return imagem
+    }()
+    
     lazy var numLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -67,10 +75,10 @@ class DetalhesScreen: UIView {
         return view
     }()
     
-    lazy var adicionarButton:UIButton = {
+    lazy var removerButton:UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("ADICIONAR", for: .normal)
+        button.setTitle("REMOVER", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
@@ -162,7 +170,7 @@ class DetalhesScreen: UIView {
    
     private func configSuperView() {
         self.addSubview(self.backButton)
-        self.addSubview(self.adicionarButton)
+        self.addSubview(self.removerButton)
     }
     
     private func configSuperLabel() {
@@ -183,6 +191,7 @@ class DetalhesScreen: UIView {
     
     private func configImageView() {
         self.addSubview(self.imagemMoeda)
+        self.addSubview(self.imagMoeda)
     }
     
     private func configBackGround() {
@@ -213,6 +222,8 @@ class DetalhesScreen: UIView {
             self.btcLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 15),
             self.btcLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
+          
+            
             self.imagemMoeda.topAnchor.constraint(equalTo: self.btcLabel.topAnchor, constant: 50),
             self.imagemMoeda.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 125),
             self.imagemMoeda.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -125),
@@ -221,19 +232,22 @@ class DetalhesScreen: UIView {
             self.numLabel.topAnchor.constraint(equalTo: self.imagemMoeda.topAnchor, constant: 40),
             self.numLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.numLabel.heightAnchor.constraint(equalToConstant: 20),
-       
             
-            self.adicionarButton.topAnchor.constraint(equalTo: self.numLabel.topAnchor, constant: 70),
-            self.adicionarButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
-            self.adicionarButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -50),
-            self.adicionarButton.heightAnchor.constraint(equalToConstant: 50),
+            self.imagMoeda.topAnchor.constraint(equalTo: self.topAnchor, constant: 55),
+            self.imagMoeda.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
+            self.imagMoeda.heightAnchor.constraint(equalToConstant: 20),
+            
+            self.removerButton.topAnchor.constraint(equalTo: self.numLabel.topAnchor, constant: 70),
+            self.removerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
+            self.removerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -50),
+            self.removerButton.heightAnchor.constraint(equalToConstant: 50),
          
-            self.viewPreta.topAnchor.constraint(equalTo: self.adicionarButton.bottomAnchor, constant: 20),
+            self.viewPreta.topAnchor.constraint(equalTo: self.removerButton.bottomAnchor, constant: 20),
             self.viewPreta.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             self.viewPreta.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
             self.viewPreta.heightAnchor.constraint(equalToConstant: 500),
             
-            self.volumeLabel.topAnchor.constraint(equalTo: self.adicionarButton.bottomAnchor, constant: 30),
+            self.volumeLabel.topAnchor.constraint(equalTo: self.removerButton.bottomAnchor, constant: 30),
             self.volumeLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.volumeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             self.volumeLabel.heightAnchor.constraint(equalToConstant: 40),

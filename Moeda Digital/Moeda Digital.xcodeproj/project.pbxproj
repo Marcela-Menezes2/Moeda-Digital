@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0492AD27DB7F36000C343E /* RemoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0492AC27DB7F36000C343E /* RemoverScreen.swift */; };
+		AD0492AF27DB8618000C343E /* RemoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0492AE27DB8618000C343E /* RemoverViewController.swift */; };
 		ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */; };
 		ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */; };
 		ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */; };
@@ -20,6 +22,7 @@
 		ADE1F3FB27D6829700BA0FD9 /* DetalhesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3FA27D6829700BA0FD9 /* DetalhesScreen.swift */; };
 		ADF43FC227DA6C7A00EF526C /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF43FC127DA6C7A00EF526C /* UIViewController+.swift */; };
 		ADF43FC427DA733400EF526C /* CelulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF43FC327DA733400EF526C /* CelulaTableViewCell.swift */; };
+		ADF43FC727DA992C00EF526C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF43FC627DA992C00EF526C /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD0492AC27DB7F36000C343E /* RemoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoverScreen.swift; sourceTree = "<group>"; };
+		AD0492AE27DB8618000C343E /* RemoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoverViewController.swift; sourceTree = "<group>"; };
 		ADDA3C9327D3EA9B00F07320 /* Moeda Digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moeda Digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		ADE1F3FA27D6829700BA0FD9 /* DetalhesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesScreen.swift; sourceTree = "<group>"; };
 		ADF43FC127DA6C7A00EF526C /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		ADF43FC327DA733400EF526C /* CelulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaTableViewCell.swift; sourceTree = "<group>"; };
+		ADF43FC627DA992C00EF526C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0492AB27DB7EF1000C343E /* RemoverScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AD0492AC27DB7F36000C343E /* RemoverScreen.swift */,
+				AD0492AE27DB8618000C343E /* RemoverViewController.swift */,
+			);
+			path = RemoverScreen;
+			sourceTree = "<group>";
+		};
 		AD67CAB127D91DB4008F7613 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				ADF43FC527DA98F400EF526C /* New Group */,
 				ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */,
 				ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */,
+				ADF43FC627DA992C00EF526C /* TabBar.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -181,6 +198,7 @@
 		ADE1F3F527D67B8300BA0FD9 /* HeaderDetails */ = {
 			isa = PBXGroup;
 			children = (
+				AD0492AB27DB7EF1000C343E /* RemoverScreen */,
 				ADE1F3F627D67B9500BA0FD9 /* Screen1 */,
 			);
 			path = HeaderDetails;
@@ -201,6 +219,13 @@
 				ADE1F3F827D67C5C00BA0FD9 /* DetalhesVCViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		ADF43FC527DA98F400EF526C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,10 +358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF43FC727DA992C00EF526C /* TabBar.swift in Sources */,
 				ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */,
 				ADF43FC227DA6C7A00EF526C /* UIViewController+.swift in Sources */,
+				AD0492AF27DB8618000C343E /* RemoverViewController.swift in Sources */,
 				ADE1F3FB27D6829700BA0FD9 /* DetalhesScreen.swift in Sources */,
 				ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */,
+				AD0492AD27DB7F36000C343E /* RemoverScreen.swift in Sources */,
 				ADE1F3F927D67C5C00BA0FD9 /* DetalhesVCViewController.swift in Sources */,
 				ADE1F3EA27D6374900BA0FD9 /* moedaScreen.swift in Sources */,
 				ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */,
