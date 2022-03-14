@@ -14,11 +14,11 @@ protocol MoedaScreenProtocol: AnyObject {
 
 class MoedaScreen: UIView {
   //  let navigationController = UINavigationController()
-    var onVoltar: (() -> Void)!
-    var detalhes: DetalhesViewController = DetalhesViewController()
+  //  var onVoltar: (() -> Void)!
+ //   var detalhes: DetalhesViewController = DetalhesViewController()
    
-    let cellId = "celulaMoeda"
-    let dados = ["Moacir", "Ana", "Tatiana", "Natanael", "Joao", "Pedro", "Mallu Cristina", "Paulo", "Lucas", "Marcela", "Bruna" ]
+    let cellId = "CryptoTableViewCell"
+    let dados = [" "]
     
     private weak var delegate: MoedaScreenProtocol?
     func delegate(delegate: MoedaScreenProtocol?) {
@@ -27,6 +27,18 @@ class MoedaScreen: UIView {
     
     let searchBar = UISearchBar()
     let categoryCellid = UICollectionViewController().self
+    
+    private var viewModels = [CryptoTableViewCellViewModel]()
+    
+    static let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = .current
+        formatter.allowsFloats = true
+        formatter.numberStyle = .currency
+        formatter.formatterBehavior = .default
+        
+        return formatter
+    }()
 
     lazy var moedaLabel: UILabel = {
         let label = UILabel()
@@ -63,7 +75,7 @@ class MoedaScreen: UIView {
         tv.backgroundColor = .black
         tv.delegate = self
         tv.dataSource = self
-        tv.register(CelulaTableViewCell.self, forCellReuseIdentifier: self.cellId)
+        tv.register(CryptoTableViewCell.self, forCellReuseIdentifier: self.cellId)
         tv.accessibilityLabel = "Lista de cripto moedas"
         return tv
     }()
@@ -105,31 +117,37 @@ class MoedaScreen: UIView {
 
 extension MoedaScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.dados.count
+        
+        return viewModels.count
     }
     
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CelulaTableViewCell
- 
-    let nome = dados[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+             withIdentifier: CryptoTableViewCell.identifier,
+             for: indexPath
+         )as? CryptoTableViewCell else {
+             fatalError()
+         }
+      cell.configure(with: viewModels[indexPath.row])
+        
+        return cell
+    }
     
-    cell.name.text = nome
-    cell.backgroundColor = .black
-    
-    return cell
-  
-   }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("DEu Certo")
+      
+       }
+  //  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   //     print("DEu Certo")
        
-    }
+ //   }
 
   //  self.navigationController?.pushViewController(detalhes, animated: true)
     // MARK: - AQUI
     // func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     // tableView(UITableView, didSelectRowAt: navigationController)
    // }
-}
+
+
 
     
+
 
