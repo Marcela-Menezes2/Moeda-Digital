@@ -16,117 +16,115 @@ struct CryptoTableViewCellViewModel{
 
 
 class CryptoTableViewCell: UITableViewCell {
+    static let identifier = "CryptoTableViewCell"
+    let coinImage: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named: "Bitcoin")
+        iv.contentMode = .scaleAspectFit
+        iv.translatesAutoresizingMaskIntoConstraints = false
+    
+        
+        return iv
+    }()
+    
+    let nameBit: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        lb.textColor = .white
+        
+        return lb
+    }()
+    
+    var shortName: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        lb.textColor = .white
+        
+        return lb
+    }()
+    
+    var priceBit:  UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        lb.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        lb.textColor = .white
+        lb.textAlignment = .right
+        
+        return lb
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        contentView.addSubview(coinImage)
+        contentView.addSubview(nameBit)
+        contentView.addSubview(shortName)
+        contentView.addSubview(priceBit)
 
+        coinImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        coinImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6).isActive = true
+        coinImage.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        coinImage.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        
+        NSLayoutConstraint.activate([
+            nameBit.topAnchor.constraint(equalTo: coinImage.topAnchor),
+            nameBit.leftAnchor.constraint(equalTo: coinImage.rightAnchor, constant: 12),
+            nameBit.widthAnchor.constraint(equalToConstant: 100),
+            
+            shortName.topAnchor.constraint(equalTo: nameBit.bottomAnchor, constant: 4),
+            shortName.leftAnchor.constraint(equalTo: coinImage.rightAnchor, constant: 12),
+            shortName.widthAnchor.constraint(equalToConstant: 100),
+            
+            priceBit.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            priceBit.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -12),
+            priceBit.widthAnchor.constraint(equalToConstant: 120)
 
-  static let identifier = "CryptoTableViewCell"
-  
-  private let nameLabel: UILabel = {
-    let label = UILabel()
-    label.font = .systemFont(ofSize: 20, weight: .medium)
-    label.textColor = .white
-    return label
+        ])
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+         super.setSelected(selected, animated: animated)
 
-  }()
+         if !selected {
+            contentView.backgroundColor = .black
+         } else {
+             contentView.backgroundColor = .black
+         }
+     }
+    
+    func configure(with viewModel: CryptoTableViewCellViewModel){
+      nameBit.text = viewModel.name
+      priceBit.text = viewModel.price
+      shortName.text = viewModel.symbol
 
-  
+//        debugPrint(viewModel.iconURL)
+      if let url = viewModel.iconURL{
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
+          if let data = data {
+            DispatchQueue.main.async {
+              self?.coinImage.image = UIImage(data: data)
 
-  private let symbolLabel: UILabel = {
-    let label = UILabel()
-    label.font = .systemFont(ofSize: 17, weight: .regular)
-    label.textColor = .white
-    return label
-
-  }()
-
-  
-
-  private let priceLabel: UILabel = {
-    let label = UILabel()
-    label.textColor = .green
-    label.textAlignment = .right
-    label.font = .systemFont(ofSize: 17, weight: .semibold)
-    return label
-
-  }()
-
-  
-
-  private let iconImageView: UIImageView = {
-    let image = UIImageView()
-    image.contentMode = .scaleAspectFit
-    return image
-
-  }()
-
-  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-    super.init(style: style, reuseIdentifier: reuseIdentifier)
-    contentView.backgroundColor = .black
-    contentView.addSubview(nameLabel)
-    contentView.addSubview(symbolLabel)
-    contentView.addSubview(priceLabel)
-    contentView.addSubview(iconImageView)
-
-  }
-
-  required init?(coder: NSCoder) {
-
-    fatalError("init(coder:) has not been implemented")
-
-  }
-
-  override func layoutSubviews() {
-    super.layoutSubviews()
-    let size: CGFloat = contentView.frame.size.height/1.1
-    iconImageView.frame = CGRect(x: 20, y: (contentView.frame.size.height-size)/2, width: size, height: size)
-
-    nameLabel.sizeToFit()
-    priceLabel.sizeToFit()
-    symbolLabel.sizeToFit()
-    nameLabel.frame = CGRect(
-        x: 30 + size,
-        y: 0,
-        width: contentView.frame.size.width/2,
-        height: contentView.frame.height/2)
-      
-    symbolLabel.frame = CGRect(
-        x: 30 + size,
-        y: contentView.frame.size.height/2,
-        width: contentView.frame.size.width/2,
-        height: contentView.frame.height/2)
-      
-    priceLabel.frame = CGRect(
-        x: contentView.frame.size.width/2,
-        y: 0,
-        width: (contentView.frame.size.width/2)-15,
-        height: contentView.frame.height)
-
-  }
-
-  
-
-  func configure(with viewModel: CryptoTableViewCellViewModel){
-    nameLabel.text = viewModel.name
-    priceLabel.text = viewModel.price
-    symbolLabel.text = viewModel.symbol
-
-    if let url = viewModel.iconURL{
-      let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
-        if let data = data {
-          DispatchQueue.main.async {
-            self?.iconImageView.image = UIImage(data: data)
+            }
 
           }
 
         }
 
+        task.resume()
+
       }
 
-      task.resume()
-
     }
+}
 
-  }
+
 
   
 
-}
+  

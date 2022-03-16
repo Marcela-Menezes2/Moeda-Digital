@@ -25,16 +25,6 @@ class DetalhesScreen: UIView {
         button.addTarget(self, action: #selector(self.tappedBackButton), for: .touchUpInside)
         return button
     }()
-    
-    lazy var voltarLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 15)
-        label.text = "Voltar"
-        return label
-    }()
-    
         lazy var btcLabel: UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
@@ -48,6 +38,14 @@ class DetalhesScreen: UIView {
         let imagem = UIImageView()
         imagem.translatesAutoresizingMaskIntoConstraints = false
         imagem.image = UIImage(named: "criptomoeda")
+        return imagem
+    }()
+    
+    lazy var imagMoeda: UIImageView = {
+        let imagem = UIImageView()
+        imagem.translatesAutoresizingMaskIntoConstraints = false
+        imagem.image = UIImage(named: "star")
+        imagem.isHidden = true
         return imagem
     }()
     
@@ -70,7 +68,7 @@ class DetalhesScreen: UIView {
     lazy var adicionarButton:UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("ADICIONAR", for: .normal)
+        button.setTitle("Adicionar", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
@@ -78,7 +76,7 @@ class DetalhesScreen: UIView {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
         button.backgroundColor = UIColor(red: 141/255, green: 149/255, blue: 98/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(self.tappedAdicionaButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.tappedAdicionarButton), for: .touchUpInside)
         return button
     }()
     
@@ -176,13 +174,13 @@ class DetalhesScreen: UIView {
     }
     
     private func configLabel() {
-        self.addSubview(self.voltarLabel)
         self.addSubview(self.btcLabel)
         self.addSubview(self.numLabel)
     }
     
     private func configImageView() {
         self.addSubview(self.imagemMoeda)
+        self.addSubview(self.imagMoeda)
     }
     
     private func configBackGround() {
@@ -195,10 +193,18 @@ class DetalhesScreen: UIView {
     
     @objc private func tappedBackButton() {
         self.delegate?.actionBackButton()
+        
    }
     
-    @objc private func tappedAdicionaButton(sender: UIButton!) {
+    @objc private func tappedAdicionarButton(sender: UIButton!) {
         self.delegate?.actionCadastrarButton()
+        if !imagMoeda.isHidden{
+            adicionarButton.setTitle("Adicionar", for: .normal)
+            imagMoeda.isHidden = true
+        }else{
+            adicionarButton.setTitle("Remover", for: .normal)
+            imagMoeda.isHidden = false
+        }
     }
     
     private func setUpContraints(){
@@ -206,9 +212,6 @@ class DetalhesScreen: UIView {
         
             self.backButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
             self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            
-            self.voltarLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 15),
-            self.voltarLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 35),
             
             self.btcLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 15),
             self.btcLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -218,12 +221,15 @@ class DetalhesScreen: UIView {
             self.imagemMoeda.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -125),
             self.imagemMoeda.heightAnchor.constraint(equalToConstant: 30),
             
-            self.numLabel.topAnchor.constraint(equalTo: self.imagemMoeda.topAnchor, constant: 40),
+            self.numLabel.topAnchor.constraint(equalTo: self.imagemMoeda.topAnchor, constant: 30),
             self.numLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.numLabel.heightAnchor.constraint(equalToConstant: 20),
        
+            self.imagMoeda.topAnchor.constraint(equalTo: self.topAnchor, constant: 55),
+            self.imagMoeda.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
+            self.imagMoeda.heightAnchor.constraint(equalToConstant: 20),
             
-            self.adicionarButton.topAnchor.constraint(equalTo: self.numLabel.topAnchor, constant: 70),
+            self.adicionarButton.topAnchor.constraint(equalTo: self.numLabel.safeAreaLayoutGuide.topAnchor),
             self.adicionarButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
             self.adicionarButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -50),
             self.adicionarButton.heightAnchor.constraint(equalToConstant: 50),

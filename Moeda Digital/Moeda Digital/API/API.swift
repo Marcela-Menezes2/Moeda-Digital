@@ -33,13 +33,13 @@ final class APICaller {
   public func getAllCryptoData(
     completion: @escaping (Result<[Crypto], Error>) -> Void
   ){
-      guard !icons.isEmpty else {
-      whenReadyBlock = completion
+//      guard !icons.isEmpty else {
+//      whenReadyBlock = completion
+//
+//      return
+//    }
 
-      return
-    }
-
-    guard let url = URL(string: "https://rest-sandbox.coinapi.io/v1/assets/?apikey=FF547373-E98D-463E-9889-4CA85651183E") else { return }
+    guard let url = URL(string: "https://rest.coinapi.io/v1/assets/?apikey=FF547373-E98D-463E-9889-4CA85651183E") else { return }
 
     let task = URLSession.shared.dataTask(with: url) { data, _, error in
 
@@ -48,7 +48,7 @@ final class APICaller {
       do{
 
         let cryptos = try JSONDecoder().decode([Crypto].self, from: data)
-
+          debugPrint(cryptos)
         completion(.success(cryptos))
           
       }catch{
@@ -65,7 +65,7 @@ final class APICaller {
 
   public func getAllIcons(){
 
-    guard let url = URL(string: "https://rest.coinapi.io/v1/assets/icons/55/?apikey=FF547373-E98D-463E-9889-4CA85651183E") else { return }
+    guard let url = URL(string: "https://rest.coinapi.io/v1/assets/icons/55/?apikey=68C87D3E-C615-4C5E-A080-5995DE794D2E") else { return }
 
     let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
 
@@ -76,12 +76,12 @@ final class APICaller {
       do{
 
         self?.icons = try JSONDecoder().decode([Icon].self, from: data)
-
-        if let completion = self?.whenReadyBlock{
-
-          self?.getAllCryptoData(completion: completion)
-
-        }
+          debugPrint(self?.icons)
+//        if let completion = self?.whenReadyBlock{
+//
+//          self?.getAllCryptoData(completion: completion)
+//
+//        }
 
     
       } catch {

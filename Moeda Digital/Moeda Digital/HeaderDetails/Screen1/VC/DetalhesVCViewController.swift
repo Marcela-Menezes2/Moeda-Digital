@@ -18,18 +18,29 @@ class DetalhesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         self.detalhesScreen?.delegate(delegate: self)
 
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
          return .lightContent
      }
+    public override func viewWillAppear(_ animated: Bool) {
+
+            super.viewWillAppear(animated)
+
+
+
+            // Hide the navigation bar on the this view controller
+
+            self.navigationController?.setNavigationBarHidden(true, animated: animated)
+
+        }
 }
 
-    
-
 extension DetalhesViewController: DetalhesScreenProtocol{
-   @objc func actionBackButton() {
+    func actionBackButton() {
+       debugPrint("Clicou")
         self.navigationController?.popViewController(animated: true)
     }
     

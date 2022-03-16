@@ -13,22 +13,25 @@ protocol MoedaScreenProtocol: AnyObject {
 }
 
 class MoedaScreen: UIView {
-  //  let navigationController = UINavigationController()
-  //  var onVoltar: (() -> Void)!
- //   var detalhes: DetalhesViewController = DetalhesViewController()
+   let navigationController = UINavigationController()
+   var onVoltar: (() -> Void)!
+   var detalhes: DetalhesViewController = DetalhesViewController()
    
+    var onSelectedMoeda: ((_ viewModel: CryptoTableViewCellViewModel) -> Void)?
+    
     let cellId = "CryptoTableViewCell"
     let dados = [" "]
+    var dadosFiltrados = [""]
     
     private weak var delegate: MoedaScreenProtocol?
     func delegate(delegate: MoedaScreenProtocol?) {
         self.delegate = delegate
     }
-    
+   
     let searchBar = UISearchBar()
     let categoryCellid = UICollectionViewController().self
     
-    private var viewModels = [CryptoTableViewCellViewModel]()
+    var viewModels = [CryptoTableViewCellViewModel]()
     
     static let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -56,16 +59,20 @@ class MoedaScreen: UIView {
        label.font = UIFont.systemFont(ofSize: 10)
        label.text = "4 jan 2020"
         return label
+          
     }()
 
     lazy var search: UISearchBar = {
         let search = UISearchBar()
         search.translatesAutoresizingMaskIntoConstraints = false
-        search.isTranslucent = true
-        search.barStyle = .black
-        search.searchTextField.font = UIFont.systemFont(ofSize: 10)
-        search.tintColor = .white
-        search.text = "Search"
+        search.searchBarStyle = .default
+        search.placeholder = "Search"
+        search.searchTextField.textColor = .white
+        search.sizeToFit()
+        search.barTintColor = UIColor(red: 1/255, green: 1/255, blue: 1/255, alpha: 1.0)
+        search.isTranslucent = false
+//        search.delegate = self
+        
         return search
     }()
     
@@ -96,7 +103,7 @@ class MoedaScreen: UIView {
     func setUpConstraints(){
        NSLayoutConstraint.activate([
         
-        self.moedaLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 14),
+        self.moedaLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
         self.moedaLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
      
         self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
@@ -115,11 +122,13 @@ class MoedaScreen: UIView {
   }
 }
 
-extension MoedaScreen: UITableViewDelegate, UITableViewDataSource {
+extension MoedaScreen: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return viewModels.count
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
@@ -128,26 +137,19 @@ extension MoedaScreen: UITableViewDelegate, UITableViewDataSource {
          )as? CryptoTableViewCell else {
              fatalError()
          }
-      cell.configure(with: viewModels[indexPath.row])
+        
+        cell.configure(with: viewModels[indexPath.row])
         
         return cell
     }
     
-      
-       }
-  //  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-   //     print("DEu Certo")
-       
- //   }
-
-  //  self.navigationController?.pushViewController(detalhes, animated: true)
-    // MARK: - AQUI
-    // func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    // tableView(UITableView, didSelectRowAt: navigationController)
-   // }
+        }
 
 
-
-    
-
-
+extension MoedaScreen: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewModel = self.viewModels[indexPath.row] 
+        
+        onSelectedMoeda?(viewModel)
+    }
+}
