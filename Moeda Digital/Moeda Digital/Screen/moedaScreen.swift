@@ -52,7 +52,7 @@ class MoedaScreen: UIView {
         return label
     }()
     
-      lazy var dataLabel: UILabel = {
+    lazy var dataLabel: UILabel = {
        let label = UILabel()
        label.translatesAutoresizingMaskIntoConstraints = false
        label.textColor = .white
@@ -95,6 +95,12 @@ class MoedaScreen: UIView {
         self.addSubview(tableView)
         self.setUpConstraints()
     }
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return tableView
+    }()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
