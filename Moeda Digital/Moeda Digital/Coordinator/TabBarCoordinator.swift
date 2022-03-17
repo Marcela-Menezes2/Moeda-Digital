@@ -20,11 +20,8 @@ class TabBarCoordinator {
     func start() {
         let listaMoedasVC = ListaDeMoedasViewcontroller()
         listaMoedasVC.onSelectedMoeda = {viewModel in
-<<<<<<< HEAD
-            let viewController = DetalhesViewController()
-=======
+
             let viewController = FavoritosViewController()
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
             
             self.navigationController.pushViewController(viewController, animated: true)
         }
@@ -35,11 +32,7 @@ class TabBarCoordinator {
         favoritosVC.title = "Adicionadas"
         
         tabBarController.setViewControllers([listaMoedasVC, favoritosVC], animated: false)
-<<<<<<< HEAD
-        
-=======
-        tabBarController.tabBar.barTintColor = .black
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
+
         guard let icones = tabBarController.tabBar.items else {
             return
         }
@@ -56,9 +49,7 @@ class TabBarCoordinator {
         }
         
         tabBarController.modalPresentationStyle = .fullScreen
-<<<<<<< HEAD
         tabBarController.tabBar.backgroundColor = .black
-=======
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
+
     }
 }

@@ -39,38 +39,37 @@ class ListaDeMoedasViewcontroller: UIViewController {
     
     func getData() {
         APICaller.shared.getAllCryptoData { [weak self] result in
-               switch result {
-               case .success(let models):
-                  self?.viewModels = models.compactMap({
-                       
-                       let price = $0.price_usd ?? 0
-                       let formatter = MoedaScreen.numberFormatter
-                       let priceString = formatter.string(from: NSNumber(value: price))
+            switch result {
+            case .success(let models):
+            self?.viewModels = models.compactMap({
+                    
+                let price = $0.priceUsd ?? 0
+                let formatter = MoedaScreen.numberFormatter
+                let priceString = formatter.string(from: NSNumber(value: price))
                       
-                       let iconURL = URL(
-                        string : "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/\($0.id_icon?.replacingOccurrences(of: "-", with: "")).png")
-//                               APICaller.shared.icons.filter({ icon in
-//                                  icon.asset_id == icon.asset_id
-//                               }).first?.url ?? "")
-
-                       
-                      return CryptoTableViewCellViewModel(
-                       name: $0.name ?? "N/A",
-                       symbol: $0.asset_id,
-                       price: priceString ?? "N/A",
-                       iconURL: iconURL
-                       )
-                      
-                   })
+//                       let iconURL = URL(
+//                        string : "https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/\($0.assetID.replacingOccurrences(of: "-", with: "")).png")
+////                               APICaller.shared.icons.filter({ icon in
+////                                  icon.asset_id == icon.asset_id
+////                               }).first?.url ?? "")
+//
+//
+                return CryptoTableViewCellViewModel(
+                    name: $0.name, //?? "N/A",
+                    symbol: $0.assetID,
+                    price: priceString ?? "N/A"
+//                  iconURL: iconURL
+                )
+            })
                    
-                   DispatchQueue.main.async {
-                       self?.vc.viewModels = self?.viewModels ?? [CryptoTableViewCellViewModel]()
-                       self?.vc.tableView.reloadData()
-                   }
+            DispatchQueue.main.async {
+                self?.vc.viewModels = self?.viewModels ?? [CryptoTableViewCellViewModel]()
+                self?.vc.tableView.reloadData()
+            }
                    
-               case .failure(let error):
-                   print("Error: \(error)")
-               }
-           }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
 }

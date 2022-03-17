@@ -13,21 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
 //        APICaller.shared.getAllIcons()
         // Override point for customization after application launch.
         return true
     }
-=======
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        
-//        APICaller.shared.getAllIcons()
-//        // Override point for customization after application launch.
-//        return true
-//    }
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
+//=======
+////    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+////
+////        APICaller.shared.getAllIcons()
+////        // Override point for customization after application launch.
+////        return true
+////    }
+//>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 
     // MARK: UISceneSession Lifecycle
 

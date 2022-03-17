@@ -23,11 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         self.window = window
 
-<<<<<<< HEAD
-        let coordinator = TabBarCoordinator(navigationController: navController, tabBarController: tabBarController )
-=======
         let coordinator = TabBarCoordinator(navigationController: navController, tabBarController: tabBarController)
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
         coordinator.start()
 }
 

@@ -11,11 +11,7 @@ struct CryptoTableViewCellViewModel{
   let name: String
   let symbol: String
   let price: String
-<<<<<<< HEAD
-  let iconURL: URL?
-=======
 //  let iconURL: URL?
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 }
 
 
@@ -23,16 +19,9 @@ class CryptoTableViewCell: UITableViewCell {
     static let identifier = "CryptoTableViewCell"
     let coinImage: UIImageView = {
         let iv = UIImageView()
-<<<<<<< HEAD
         iv.image = UIImage(named: "Bitcoin")
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
-    
-=======
-        iv.contentMode = .scaleAspectFit
-        iv.translatesAutoresizingMaskIntoConstraints = false
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
-        
         return iv
     }()
     
@@ -71,21 +60,9 @@ class CryptoTableViewCell: UITableViewCell {
         contentView.addSubview(nameBit)
         contentView.addSubview(shortName)
         contentView.addSubview(priceBit)
-
-<<<<<<< HEAD
-        coinImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
-        coinImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6).isActive = true
-        coinImage.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        coinImage.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         NSLayoutConstraint.activate([
             nameBit.topAnchor.constraint(equalTo: coinImage.topAnchor),
-=======
-        
-        
-        NSLayoutConstraint.activate([
-//            nameBit.topAnchor.constraint(equalTo: coinImage.topAnchor),
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
             nameBit.leftAnchor.constraint(equalTo: coinImage.rightAnchor, constant: 12),
             nameBit.widthAnchor.constraint(equalToConstant: 100),
             
@@ -95,17 +72,12 @@ class CryptoTableViewCell: UITableViewCell {
             
             priceBit.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             priceBit.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -12),
-<<<<<<< HEAD
-            priceBit.widthAnchor.constraint(equalToConstant: 120)
-=======
             priceBit.widthAnchor.constraint(equalToConstant: 120),
-            
+
             coinImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             coinImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6),
             coinImage.widthAnchor.constraint(equalToConstant: 25),
             coinImage.heightAnchor.constraint(equalToConstant: 25)
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
-
         ])
     }
     
@@ -128,24 +100,7 @@ class CryptoTableViewCell: UITableViewCell {
       priceBit.text = viewModel.price
       shortName.text = viewModel.symbol
 
-<<<<<<< HEAD
-//        debugPrint(viewModel.iconURL)
-      if let url = viewModel.iconURL{
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
-          if let data = data {
-            DispatchQueue.main.async {
-              self?.coinImage.image = UIImage(data: data)
 
-            }
-
-          }
-
-        }
-
-        task.resume()
-
-      }
-=======
 //      if let url = viewModel.iconURL{
 //        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
 //          if let data = data {
@@ -161,8 +116,6 @@ class CryptoTableViewCell: UITableViewCell {
 //        task.resume()
 //
 //      }
->>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
-
     }
 }
 

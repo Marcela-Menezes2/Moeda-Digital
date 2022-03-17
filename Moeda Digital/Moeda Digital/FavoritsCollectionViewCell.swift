@@ -18,74 +18,76 @@ class FavoritsCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-     var dataLabel: UILabel = {
-       let label = UILabel()
-       label.translatesAutoresizingMaskIntoConstraints = false
-       label.textColor = .white
-       label.font = UIFont.systemFont(ofSize: 10)
-       label.text = "4 jan 2020"
+    var dataLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 10)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        label.text = dateFormatter.string(from: Date.now)
         return label
     }()
     
-     var titleLabel: UILabel = {
-            let label = UILabel()
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "Bitcoin"
-            label.font = UIFont(name: "AvenirNext-Medium", size: 18.0) ?? UIFont.systemFont(ofSize: 18.0)
-            label.numberOfLines = 1
-            label.textColor = UIColor.white
-            label.textAlignment = .center
-            return label
-        }()
+    var titleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Bitcoin"
+        label.font = UIFont(name: "AvenirNext-Medium", size: 18.0) ?? UIFont.systemFont(ofSize: 18.0)
+        label.numberOfLines = 1
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        return label
+    }()
         
-        var subtitleLabel: UILabel = {
-            let label = UILabel()
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "BTC"
-            label.font = UIFont(name: "AvenirNext-Medium", size: 12.0) ?? UIFont.systemFont(ofSize: 12.0)
-            label.numberOfLines = 1
-            label.textColor = UIColor.white
-            label.textAlignment = .center
-            return label
-        }()
+    var subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "BTC"
+        label.font = UIFont(name: "AvenirNext-Medium", size: 12.0) ?? UIFont.systemFont(ofSize: 12.0)
+        label.numberOfLines = 1
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        return label
+    }()
 
-        var valueLabel: UILabel = {
-            let label = UILabel()
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = "31.010,20"
-            label.font = UIFont(name: "AvenirNext-Medium", size: 12.0) ?? UIFont.systemFont(ofSize: 12.0)
-            label.numberOfLines = 1
-            label.textColor = UIColor.white
-            label.textAlignment = .center
-            return label
-        }()
+    var valueLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "31.010,20"
+        label.font = UIFont(name: "AvenirNext-Medium", size: 12.0) ?? UIFont.systemFont(ofSize: 12.0)
+        label.numberOfLines = 1
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        return label
+    }()
 
-        var iconCoin: UIImageView = {
-            let imageView = UIImageView()
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.contentMode = .scaleAspectFit
-            imageView.clipsToBounds = true
-            return imageView
-        }()
+    var iconCoin: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }()
         
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            
-            contentView.addSubview(titleLabel)
-            contentView.addSubview(subtitleLabel)
-            contentView.addSubview(valueLabel)
-            contentView.addSubview(iconCoin)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(subtitleLabel)
+        contentView.addSubview(valueLabel)
+        contentView.addSubview(iconCoin)
 
-            contentView.addSubview(moedaLabel)
-            contentView.addSubview(dataLabel)
-            
-            contentView.backgroundColor = UIColor(red: 141/255, green: 149/255, blue: 98/255, alpha: 1.0)
-            contentView.layer.cornerRadius = 12
-            
-            self.setUpTitleConstraints()
-            self.setUpSubtitleConstraints()
-            self.setUpValueConstraints()
-            self.configConstraints()
+        contentView.addSubview(moedaLabel)
+        contentView.addSubview(dataLabel)
+        
+        contentView.backgroundColor = UIColor(red: 141/255, green: 149/255, blue: 98/255, alpha: 1.0)
+        contentView.layer.cornerRadius = 12
+        
+        self.setUpTitleConstraints()
+        self.setUpSubtitleConstraints()
+        self.setUpValueConstraints()
+        self.configConstraints()
     }
     
     func configConstraints() {

@@ -15,6 +15,7 @@ protocol MoedaScreenProtocol: AnyObject {
 class MoedaScreen: UIView {
    
     var onSelectedMoeda: ((_ viewModel: CryptoTableViewCellViewModel) -> Void)?
+    var isSearch = false
     
     let cellId = "CryptoTableViewCell"
     let dados = [" "]
@@ -91,11 +92,11 @@ class MoedaScreen: UIView {
         self.setUpConstraints()
     }
     
-    private let tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return tableView
-    }()
+//    private let tableView: UITableView = {
+//        let tableView = UITableView(frame: .zero, style: .grouped)
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        return tableView
+//    }()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
