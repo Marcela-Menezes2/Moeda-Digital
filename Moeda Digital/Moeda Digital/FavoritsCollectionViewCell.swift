@@ -136,12 +136,12 @@ class FavoritsCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-override func layoutSubviews() {
-    iconCoin.frame = CGRect(x: self.contentView.frame.width - 30,
-                            y: self.contentView.frame.minY - 5,
-                            width: 36,
-                            height: 36)
-}
+    override func layoutSubviews() {
+        iconCoin.frame = CGRect(x: self.contentView.frame.width - 30,
+                                y: self.contentView.frame.minY - 5,
+                                width: 36,
+                                height: 36)
+    }
     
 }
 extension UIView {
@@ -161,5 +161,5 @@ func addSeparator() -> UIView {
     return view
     
     }
-    }
+}
 

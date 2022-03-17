@@ -10,6 +10,11 @@
 		9903EACA27DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903EAC927DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift */; };
 		9903EACC27DFCCCE00F6AD52 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903EACB27DFCCCE00F6AD52 /* FavoritosViewController.swift */; };
 		9903EACF27DFD1DF00F6AD52 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903EACE27DFD1DF00F6AD52 /* TabBarCoordinator.swift */; };
+<<<<<<< HEAD
+=======
+		AD0492AD27DB7F36000C343E /* RemoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0492AC27DB7F36000C343E /* RemoverScreen.swift */; };
+		AD0492AF27DB8618000C343E /* RemoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0492AE27DB8618000C343E /* RemoverViewController.swift */; };
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 		AD04932C27DBCA3E000C343E /* CollectScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD04932B27DBCA3E000C343E /* CollectScreen.swift */; };
 		AD06EBFE27DFB27800710D91 /* FavoritsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD06EBFD27DFB27800710D91 /* FavoritsCollectionViewCell.swift */; };
 		ADD1DF8C27DE991600F919E5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1DF8B27DE991600F919E5 /* API.swift */; };
@@ -50,6 +55,11 @@
 		9903EAC927DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeMoedasViewcontroller.swift; sourceTree = "<group>"; };
 		9903EACB27DFCCCE00F6AD52 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
 		9903EACE27DFD1DF00F6AD52 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		AD0492AC27DB7F36000C343E /* RemoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoverScreen.swift; sourceTree = "<group>"; };
+		AD0492AE27DB8618000C343E /* RemoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoverViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 		AD04932B27DBCA3E000C343E /* CollectScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectScreen.swift; sourceTree = "<group>"; };
 		AD06EBFD27DFB27800710D91 /* FavoritsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsCollectionViewCell.swift; sourceTree = "<group>"; };
 		ADD1DF8B27DE991600F919E5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -106,6 +116,18 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		AD0492AB27DB7EF1000C343E /* RemoverScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AD0492AC27DB7F36000C343E /* RemoverScreen.swift */,
+				AD0492AE27DB8618000C343E /* RemoverViewController.swift */,
+			);
+			path = RemoverScreen;
+			sourceTree = "<group>";
+		};
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 		AD04932A27DBC9FE000C343E /* Collection */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,14 +145,22 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		AD67CAB227D91DD8008F7613 /* Controllrs */ = {
+=======
+		AD67CAB227D91DD8008F7613 /* Controllers */ = {
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 			isa = PBXGroup;
 			children = (
 				ADDA3C9A27D3EA9B00F07320 /* TabBarController.swift */,
 				9903EAC927DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift */,
 				9903EACB27DFCCCE00F6AD52 /* FavoritosViewController.swift */,
 			);
+<<<<<<< HEAD
 			path = Controllrs;
+=======
+			path = Controllers;
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 			sourceTree = "<group>";
 		};
 		AD67CAB327D91FD2008F7613 /* Cell */ = {
@@ -178,7 +208,11 @@
 				AD67CAB127D91DB4008F7613 /* Delegate */,
 				ADE1F3F527D67B8300BA0FD9 /* HeaderDetails */,
 				ADE1F3E827D636E400BA0FD9 /* Screen */,
+<<<<<<< HEAD
 				AD67CAB227D91DD8008F7613 /* Controllrs */,
+=======
+				AD67CAB227D91DD8008F7613 /* Controllers */,
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 				AD67CAB327D91FD2008F7613 /* Cell */,
 				ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */,
 				ADE1F3F127D6736B00BA0FD9 /* Storyboard */,
@@ -226,6 +260,10 @@
 		ADE1F3F527D67B8300BA0FD9 /* HeaderDetails */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				AD0492AB27DB7EF1000C343E /* RemoverScreen */,
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 				ADE1F3F627D67B9500BA0FD9 /* Screen1 */,
 			);
 			path = HeaderDetails;
@@ -381,6 +419,10 @@
 				ADDA3C9B27D3EA9B00F07320 /* TabBarController.swift in Sources */,
 				ADF43FC227DA6C7A00EF526C /* UIViewController+.swift in Sources */,
 				AD06EBFE27DFB27800710D91 /* FavoritsCollectionViewCell.swift in Sources */,
+<<<<<<< HEAD
+=======
+				AD0492AF27DB8618000C343E /* RemoverViewController.swift in Sources */,
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 				9903EACC27DFCCCE00F6AD52 /* FavoritosViewController.swift in Sources */,
 				9903EACF27DFD1DF00F6AD52 /* TabBarCoordinator.swift in Sources */,
 				ADD1DF9027DE9D4900F919E5 /* MoedaAPI.swift in Sources */,
@@ -389,6 +431,10 @@
 				ADD1DF8E27DE99A300F919E5 /* CryptoTableViewCell.swift in Sources */,
 				9903EACA27DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift in Sources */,
 				ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
+=======
+				AD0492AD27DB7F36000C343E /* RemoverScreen.swift in Sources */,
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
 				ADD1DF8C27DE991600F919E5 /* API.swift in Sources */,
 				ADE1F3F927D67C5C00BA0FD9 /* DetalhesVCViewController.swift in Sources */,
 				ADE1F3EA27D6374900BA0FD9 /* moedaScreen.swift in Sources */,

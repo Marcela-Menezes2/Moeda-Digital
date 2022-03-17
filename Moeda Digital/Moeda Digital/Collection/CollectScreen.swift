@@ -7,9 +7,15 @@
 
 import UIKit
 
+<<<<<<< HEAD
 class CollectScreen: UIViewController {
     
      var moedaLabel: UILabel = {
+=======
+class CollectScreen: UIView {
+
+    lazy var moedaLabel: UILabel = {
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
@@ -18,13 +24,18 @@ class CollectScreen: UIViewController {
         return label
     }()
     
+<<<<<<< HEAD
       var dataLabel: UILabel = {
+=======
+      lazy var dataLabel: UILabel = {
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
        let label = UILabel()
        label.translatesAutoresizingMaskIntoConstraints = false
        label.textColor = .white
        label.font = UIFont.systemFont(ofSize: 10)
        label.text = "4 jan 2020"
         return label
+<<<<<<< HEAD
           
     }()
 
@@ -78,5 +89,48 @@ extension CollectScreen: UICollectionViewDelegateFlowLayout, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/2.5, height: collectionView.frame.width/2)
+=======
+    }()
+    
+    
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .red
+        collectionView.delaysContentTouches = false
+        let layout: UICollectionViewLayout = UICollectionViewLayout.init()
+       // layout.scrollDirection = .horizontal
+        collectionView.setCollectionViewLayout(layout, animated: false)
+        return collectionView
+    }()
+
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        self.addSubview()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addSubview() {
+        self.addSubview(collectionView)
+        self.addSubview(moedaLabel)
+        self.addSubview(dataLabel)
+    }
+    
+    func configConstraints() {
+        NSLayoutConstraint.activate([
+        
+            self.moedaLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 14),
+            self.moedaLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+         
+            self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
+            self.dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
+        
+        ])
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
     }
 }

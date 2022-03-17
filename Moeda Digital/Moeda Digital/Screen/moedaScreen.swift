@@ -13,9 +13,6 @@ protocol MoedaScreenProtocol: AnyObject {
 }
 
 class MoedaScreen: UIView {
-   let navigationController = UINavigationController()
-   var onVoltar: (() -> Void)!
-   var detalhes: DetalhesViewController = DetalhesViewController()
    
     var onSelectedMoeda: ((_ viewModel: CryptoTableViewCellViewModel) -> Void)?
     
@@ -27,7 +24,6 @@ class MoedaScreen: UIView {
     func delegate(delegate: MoedaScreenProtocol?) {
         self.delegate = delegate
     }
-   
     let searchBar = UISearchBar()
     let categoryCellid = UICollectionViewController().self
     
@@ -53,26 +49,25 @@ class MoedaScreen: UIView {
     }()
     
     lazy var dataLabel: UILabel = {
-       let label = UILabel()
-       label.translatesAutoresizingMaskIntoConstraints = false
-       label.textColor = .white
-       label.font = UIFont.systemFont(ofSize: 10)
-       label.text = "4 jan 2020"
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 10)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        label.text = dateFormatter.string(from: Date.now)
         return label
-          
     }()
 
     lazy var search: UISearchBar = {
         let search = UISearchBar()
         search.translatesAutoresizingMaskIntoConstraints = false
-        search.searchBarStyle = .default
+        search.isTranslucent = true
+        search.barStyle = .black
+        search.searchTextField.font = UIFont.systemFont(ofSize: 10)
+        search.tintColor = .white
         search.placeholder = "Search"
-        search.searchTextField.textColor = .white
-        search.sizeToFit()
-        search.barTintColor = UIColor(red: 1/255, green: 1/255, blue: 1/255, alpha: 1.0)
-        search.isTranslucent = false
-//        search.delegate = self
-        
+        search.delegate = self
         return search
     }()
     
@@ -109,23 +104,23 @@ class MoedaScreen: UIView {
     func setUpConstraints(){
        NSLayoutConstraint.activate([
         
-        self.moedaLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
-        self.moedaLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.moedaLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
+            self.moedaLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
      
-        self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
-        self.dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-        self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
+            self.dataLabel.topAnchor.constraint(equalTo: self.moedaLabel.bottomAnchor, constant: 10),
+            self.dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.dataLabel.heightAnchor.constraint(equalToConstant: 10),
        
-        self.search.topAnchor.constraint(equalTo: self.dataLabel.bottomAnchor, constant: 14),
-        self.search.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6),
-        self.search.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -6),
-        
-        self.tableView.topAnchor.constraint(equalTo: search.bottomAnchor, constant: 10),
-        self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-        self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor),
-        self.tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
-     ])
-  }
+            self.search.topAnchor.constraint(equalTo: self.dataLabel.bottomAnchor, constant: 14),
+            self.search.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6),
+            self.search.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -6),
+
+            self.tableView.topAnchor.constraint(equalTo: search.bottomAnchor, constant: 10),
+            self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.tableView.widthAnchor.constraint(equalTo: self.widthAnchor),
+            self.tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        ])
+    }
 }
 
 extension MoedaScreen: UITableViewDataSource {
@@ -134,9 +129,15 @@ extension MoedaScreen: UITableViewDataSource {
         return viewModels.count
     }
     
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        var nome = ""
+//
+//        if isSearch{
+//            nome = dadosFiltrados[indexPath.row]
+//        }else{
+//            nome = dados[indexPath.row]
+//        }
+        
         guard let cell = tableView.dequeueReusableCell(
              withIdentifier: CryptoTableViewCell.identifier,
              for: indexPath
@@ -148,14 +149,68 @@ extension MoedaScreen: UITableViewDataSource {
         
         return cell
     }
-    
-        }
-
+}
 
 extension MoedaScreen: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewModel = self.viewModels[indexPath.row] 
         
         onSelectedMoeda?(viewModel)
+    }
+}
+
+extension MoedaScreen:UISearchBarDelegate{
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        isSearch = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        isSearch = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        isSearch = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        isSearch = false
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        if searchText.count != 0{
+//            dadosFiltrados = dados.filter({ (text) -> Bool in
+//                let tmp: NSString = text as NSString
+//                let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+//                return range.location != NSNotFound
+//            })
+//            if dadosFiltrados.count == 0{
+//                isSearch = false
+//            }else{
+//                isSearch = true
+//            }
+//            self.tableView.reloadData()
+//            return
+//        }
+//        isSearch = false
+//        self.tableView.reloadData()
+        if searchText.count == 0{
+            isSearch = false
+            self.tableView.reloadData()
+        }else{
+            dadosFiltrados = dados.filter({ (text) -> Bool in
+                let tmp: NSString = text as NSString
+                let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            if dadosFiltrados.count == 0{
+                isSearch = false
+            }else{
+                isSearch = true
+            }
+            self.tableView.reloadData()
+        }
     }
 }

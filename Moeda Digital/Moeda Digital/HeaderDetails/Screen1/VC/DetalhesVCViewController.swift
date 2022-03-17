@@ -44,9 +44,9 @@ extension DetalhesViewController: DetalhesScreenProtocol{
         self.navigationController?.popViewController(animated: true)
     }
     
-    func actionCadastrarButton() {
-        
-    }
+//    func actionCadastrarButton() {
+//        
+//    }
 }
 
 

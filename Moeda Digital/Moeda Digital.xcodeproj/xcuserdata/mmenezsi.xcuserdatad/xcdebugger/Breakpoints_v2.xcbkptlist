@@ -202,8 +202,13 @@
             filePath = "Moeda Digital/Screen/moedaScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "138"
             endingLineNumber = "138"
+=======
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+>>>>>>> 53bcb40 (Att de várias funções. Sim eu me baguncei todo com as branchs)
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>

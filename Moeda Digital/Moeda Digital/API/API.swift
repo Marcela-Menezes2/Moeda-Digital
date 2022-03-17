@@ -9,91 +9,62 @@ import Foundation
 
 final class APICaller {
 
-  static let shared = APICaller()
-  public var icons: [Icon] = []
+    static let shared = APICaller()
+    public var icons: [CoinAPIElement] = []
 
   
 
-  private var whenReadyBlock: ((Result<[Crypto], Error>) -> Void)?
+    private var whenReadyBlock: ((Result<[CoinAPIElement], Error>) -> Void)?
 
-  // se der erro trocar a chave da api
+    // se der erro trocar a chave da api
 
-  private struct Constants{
+    private struct Constants{
+        static let APIKey = "A47747AB-9055-4EEE-8A4C-5D29ABD7F064"
+        static let assetsEndPoint = "https://rest-sandbox.coinapi.io/v1/assets/"
+        static let searchUrlString = "https://rest-sandbox.coinapi.io/v1/assets/?apikey=\(APIKey)"
+    }
 
-    static let APIKey = "FF547373-E98D-463E-9889-4CA85651183E"
+    private init() {}
 
-    static let assetsEndPoint = "https://rest-sandbox.coinapi.io/v1/assets/"
-      
-    static let searchUrlString = "https://rest-sandbox.coinapi.io/v1/assets/?apikey=FF547373-E98D-463E-9889-4CA85651183E"
-
-  }
-
-  private init() {}
-
-  public func getAllCryptoData(
-    completion: @escaping (Result<[Crypto], Error>) -> Void
-  ){
+    public func getAllCryptoData(
+        completion: @escaping (Result<[CoinAPIElement], Error>) -> Void
+    ){
 //      guard !icons.isEmpty else {
 //      whenReadyBlock = completion
 //
 //      return
 //    }
 
-    guard let url = URL(string: "https://rest.coinapi.io/v1/assets/?apikey=FF547373-E98D-463E-9889-4CA85651183E") else { return }
+    guard let url = URL(string: "https://rest-sandbox.coinapi.io/v1/assets/?apikey=A47747AB-9055-4EEE-8A4C-5D29ABD7F064") else { return }
 
     let task = URLSession.shared.dataTask(with: url) { data, _, error in
-
-      guard let data = data, error == nil else { return }
-
-      do{
-
-        let cryptos = try JSONDecoder().decode([Crypto].self, from: data)
-          debugPrint(cryptos)
-        completion(.success(cryptos))
-          
-      }catch{
-
-        completion(.failure(error))
-
-      }
-
+        guard let data = data, error == nil else { return }
+        
+        do{
+            let cryptos = try JSONDecoder().decode([CoinAPIElement].self, from: data)
+            completion(.success(cryptos))
+        }catch{
+            completion(.failure(error))
+        }
+    }
+        
+    task.resume()
     }
 
-    task.resume()
-
-  }
-
-  public func getAllIcons(){
-
-    guard let url = URL(string: "https://rest.coinapi.io/v1/assets/icons/55/?apikey=68C87D3E-C615-4C5E-A080-5995DE794D2E") else { return }
-
-    let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-
-      guard let data = data, error == nil else { return }
-
-      
-
-      do{
-
-        self?.icons = try JSONDecoder().decode([Icon].self, from: data)
-          debugPrint(self?.icons)
-//        if let completion = self?.whenReadyBlock{
+//    public func getAllIcons(){
 //
-//          self?.getAllCryptoData(completion: completion)
-//
-//        }
-
-    
-      } catch {
-
-        print(error)
-
-      }
-
-    }
-
-    task.resume()
-
-  }
-
+//      guard let url = URL(string: "https://rest.coinapi.io/v1/assets/icons/55/?apikey=A47747AB-9055-4EEE-8A4C-5D29ABD7F064") else { return }
+//      let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+//          guard let data = data, error == nil else { return }
+//          do{
+//              self?.icons = try JSONDecoder().decode([CoinAPIElement].self, from: data)
+//              if let completion = self?.whenReadyBlock{
+//                  self?.getAllCryptoData(completion: completion)
+//              }
+//          } catch {
+//              print(error)
+//          }
+//      }
+//      task.resume()
+//  }
 }
