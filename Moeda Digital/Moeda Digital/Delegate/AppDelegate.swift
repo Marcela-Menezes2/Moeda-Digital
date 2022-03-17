@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        APICaller.shared.getAllIcons()
+//       APICaller.shared.getAllIcons()
         // Override point for customization after application launch.
         return true
     }
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         var window: UIWindow?
                 window = UIWindow(frame: UIScreen.main.bounds) // 1
-                let mainVC = ViewController()
+                let mainVC = TabBarController()
                 window?.rootViewController = mainVC // 2
                 window?.makeKeyAndVisible() // 3
               //  return true

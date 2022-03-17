@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD0492AD27DB7F36000C343E /* RemoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0492AC27DB7F36000C343E /* RemoverScreen.swift */; };
-		AD0492AF27DB8618000C343E /* RemoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0492AE27DB8618000C343E /* RemoverViewController.swift */; };
+		9903EACA27DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903EAC927DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift */; };
+		9903EACC27DFCCCE00F6AD52 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903EACB27DFCCCE00F6AD52 /* FavoritosViewController.swift */; };
+		9903EACF27DFD1DF00F6AD52 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903EACE27DFD1DF00F6AD52 /* TabBarCoordinator.swift */; };
 		AD04932C27DBCA3E000C343E /* CollectScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD04932B27DBCA3E000C343E /* CollectScreen.swift */; };
 		AD06EBFE27DFB27800710D91 /* FavoritsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD06EBFD27DFB27800710D91 /* FavoritsCollectionViewCell.swift */; };
 		ADD1DF8C27DE991600F919E5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1DF8B27DE991600F919E5 /* API.swift */; };
@@ -16,7 +17,7 @@
 		ADD1DF9027DE9D4900F919E5 /* MoedaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1DF8F27DE9D4900F919E5 /* MoedaAPI.swift */; };
 		ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */; };
 		ADDA3C9927D3EA9B00F07320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */; };
-		ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */; };
+		ADDA3C9B27D3EA9B00F07320 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3C9A27D3EA9B00F07320 /* TabBarController.swift */; };
 		ADDA3CA027D3EA9E00F07320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */; };
 		ADDA3CA327D3EA9E00F07320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDA3CA127D3EA9E00F07320 /* LaunchScreen.storyboard */; };
 		ADDA3CAE27D3EA9E00F07320 /* Moeda_DigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3CAD27D3EA9E00F07320 /* Moeda_DigitalTests.swift */; };
@@ -46,8 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AD0492AC27DB7F36000C343E /* RemoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoverScreen.swift; sourceTree = "<group>"; };
-		AD0492AE27DB8618000C343E /* RemoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoverViewController.swift; sourceTree = "<group>"; };
+		9903EAC927DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeMoedasViewcontroller.swift; sourceTree = "<group>"; };
+		9903EACB27DFCCCE00F6AD52 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		9903EACE27DFD1DF00F6AD52 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		AD04932B27DBCA3E000C343E /* CollectScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectScreen.swift; sourceTree = "<group>"; };
 		AD06EBFD27DFB27800710D91 /* FavoritsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsCollectionViewCell.swift; sourceTree = "<group>"; };
 		ADD1DF8B27DE991600F919E5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		ADDA3C9327D3EA9B00F07320 /* Moeda Digital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moeda Digital.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDA3C9627D3EA9B00F07320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADDA3C9827D3EA9B00F07320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADDA3C9A27D3EA9B00F07320 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		ADDA3C9F27D3EA9E00F07320 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADDA3CA227D3EA9E00F07320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADDA3CA427D3EA9E00F07320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,13 +98,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AD0492AB27DB7EF1000C343E /* RemoverScreen */ = {
+		9903EACD27DFD1BF00F6AD52 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				AD0492AC27DB7F36000C343E /* RemoverScreen.swift */,
-				AD0492AE27DB8618000C343E /* RemoverViewController.swift */,
+				9903EACE27DFD1DF00F6AD52 /* TabBarCoordinator.swift */,
 			);
-			path = RemoverScreen;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		AD04932A27DBC9FE000C343E /* Collection */ = {
@@ -125,7 +126,9 @@
 		AD67CAB227D91DD8008F7613 /* Controllrs */ = {
 			isa = PBXGroup;
 			children = (
-				ADDA3C9A27D3EA9B00F07320 /* ViewController.swift */,
+				ADDA3C9A27D3EA9B00F07320 /* TabBarController.swift */,
+				9903EAC927DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift */,
+				9903EACB27DFCCCE00F6AD52 /* FavoritosViewController.swift */,
 			);
 			path = Controllrs;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 		ADDA3C9527D3EA9B00F07320 /* Moeda Digital */ = {
 			isa = PBXGroup;
 			children = (
+				9903EACD27DFD1BF00F6AD52 /* Coordinator */,
 				ADD1DF8A27DE98D300F919E5 /* API */,
 				AD04932A27DBC9FE000C343E /* Collection */,
 				AD67CAB127D91DB4008F7613 /* Delegate */,
@@ -222,7 +226,6 @@
 		ADE1F3F527D67B8300BA0FD9 /* HeaderDetails */ = {
 			isa = PBXGroup;
 			children = (
-				AD0492AB27DB7EF1000C343E /* RemoverScreen */,
 				ADE1F3F627D67B9500BA0FD9 /* Screen1 */,
 			);
 			path = HeaderDetails;
@@ -375,16 +378,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADDA3C9B27D3EA9B00F07320 /* ViewController.swift in Sources */,
+				ADDA3C9B27D3EA9B00F07320 /* TabBarController.swift in Sources */,
 				ADF43FC227DA6C7A00EF526C /* UIViewController+.swift in Sources */,
 				AD06EBFE27DFB27800710D91 /* FavoritsCollectionViewCell.swift in Sources */,
-				AD0492AF27DB8618000C343E /* RemoverViewController.swift in Sources */,
+				9903EACC27DFCCCE00F6AD52 /* FavoritosViewController.swift in Sources */,
+				9903EACF27DFD1DF00F6AD52 /* TabBarCoordinator.swift in Sources */,
 				ADD1DF9027DE9D4900F919E5 /* MoedaAPI.swift in Sources */,
 				AD04932C27DBCA3E000C343E /* CollectScreen.swift in Sources */,
 				ADE1F3FB27D6829700BA0FD9 /* DetalhesScreen.swift in Sources */,
 				ADD1DF8E27DE99A300F919E5 /* CryptoTableViewCell.swift in Sources */,
+				9903EACA27DFC1C800F6AD52 /* ListaDeMoedasViewcontroller.swift in Sources */,
 				ADDA3C9727D3EA9B00F07320 /* AppDelegate.swift in Sources */,
-				AD0492AD27DB7F36000C343E /* RemoverScreen.swift in Sources */,
 				ADD1DF8C27DE991600F919E5 /* API.swift in Sources */,
 				ADE1F3F927D67C5C00BA0FD9 /* DetalhesVCViewController.swift in Sources */,
 				ADE1F3EA27D6374900BA0FD9 /* moedaScreen.swift in Sources */,
